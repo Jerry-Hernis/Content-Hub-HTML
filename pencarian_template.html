@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb68d",
+                        "outline-variant": "#c1c7d3",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d3daef",
+                        "outline": "#717783",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-container": "#2976c7",
+                        "on-secondary-fixed-variant": "#763300",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface-variant": "#414751",
+                        "surface-variant": "#dce2f7",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#331200",
+                        "secondary": "#9b4500",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-highest": "#dce2f7",
+                        "secondary-container": "#fc8a40",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#672c00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#293040",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#005da7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "background": "#f9f9ff",
+                        "surface-container": "#e9edff",
+                        "surface-tint": "#0060ac",
+                        "on-surface": "#141b2b",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-primary-fixed": "#001c39",
+                        "tertiary": "#7f5300",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .keyboard-key {
+            @apply flex items-center justify-center bg-white rounded-md shadow-sm active:bg-slate-200 transition-colors text-on-surface font-medium;
+            height: 44px;
+        }
+        .glass-overlay {
+            background: rgba(249, 249, 255, 0.85);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-hidden">
+<!-- SIDE NAV BAR -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-50">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<!-- Active Tab: Template -->
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="Rina Wijaya" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPbLmMIQolhJF6JiDLlf4T_XFdkBITtOe8qnd9Ecby_QdFJZSTzEraHKGNFA0O0do2Nb9s6nGcbJIQykibmWIue8zN1HkXwrl97mKOB4ziSV1p1dop0xNtz-Hr-7wQhin0AgN_oD7ufF8XYNys2vb7gz5AuFi6W_yOcuE52wSdXak4CBMWASDT4EKEy02QHGvz_P-YRvGukKwGECuUlfhTZt7Zk9L9Du-DuYn0QKkCit37ex1gUgbCSY_ivz_xMJ5QGVASsjWlw"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN CONTENT AREA -->
+<main class="ml-64 min-h-screen relative">
+<!-- TOP NAV BAR -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-8 z-40 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-50 border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Cari template konten..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chat</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden border border-primary/10">
+<img alt="User Avatar" data-alt="professional headshot of a business woman in a modern minimalist office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0SBMunqrPeaHER_vywdgDhLoPRuGdaYPLS1dqzPwote-TQGwCDuiR83jyxLPJbx1wD3Ukqd8OAJdOGfBOsvc2rc7d57G7Y4EsmvJm8bNDYeHGlQP2auytiXPnypdtW--bCYIeNUeoOlED7fykoGkAW3BWWvL5tp5F3yVDXmjLJvo_4Pw0bEbn9ypAHWgTIEa95K23yuB2ls9-R-qLUnEQzXfH8zSlNd1QykixtnnGj8RHYyWBixs2q3exjVsHt7XdjjiC-ZABbA"/>
+</div>
+</div>
+</header>
+<!-- CONTENT STAGE (DIMMED) -->
+<div class="pt-24 px-10 pb-10 opacity-40 select-none pointer-events-none">
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Template Library</h2>
+<p class="text-on-surface-variant">Pilih ribuan template siap pakai untuk bisnis Anda.</p>
+</div>
+<!-- BENTO GRID PREVIEW -->
+<div class="grid grid-cols-12 gap-6">
+<div class="col-span-8 bg-surface-container-low rounded-xl p-6 h-64 overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+</div>
+<div class="col-span-4 bg-surface-container-low rounded-xl p-6 h-64"></div>
+<div class="col-span-4 bg-surface-container-low rounded-xl p-6 h-48"></div>
+<div class="col-span-4 bg-surface-container-low rounded-xl p-6 h-48"></div>
+<div class="col-span-4 bg-surface-container-low rounded-xl p-6 h-48"></div>
+</div>
+</div>
+<!-- SEARCH OVERLAY (ACTIVE STATE) -->
+<div class="fixed inset-0 ml-64 z-[60] flex flex-col items-center pt-24 glass-overlay">
+<div class="w-full max-w-2xl px-6">
+<!-- Focused Search Bar -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-primary/20 rounded-2xl blur-md opacity-75"></div>
+<div class="relative bg-white rounded-xl shadow-xl border-2 border-primary overflow-hidden flex items-center px-5 h-14">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'wght' 600;">search</span>
+<input autofocus="" class="flex-1 border-none focus:ring-0 text-lg font-medium text-on-surface placeholder-slate-400 bg-transparent" type="text" value="Promo Ramadhan"/>
+<button class="text-slate-400 hover:text-error transition-colors">
+<span class="material-symbols-outlined">cancel</span>
+</button>
+</div>
+</div>
+<!-- Recent Searches & Suggestions -->
+<div class="mt-6 animate-in fade-in slide-in-from-top-4 duration-500">
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Pencarian Terakhir</span>
+<button class="text-xs font-semibold text-primary hover:underline">Hapus Semua</button>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-3 rounded-xl hover:bg-primary-fixed/30 cursor-pointer transition-colors group">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-400 mr-3 text-sm">history</span>
+<span class="text-on-surface">Instagram Reel Fashion</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl hover:bg-primary-fixed/30 cursor-pointer transition-colors group">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-400 mr-3 text-sm">history</span>
+<span class="text-on-surface">Flyer Promo Kuliner</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl hover:bg-primary-fixed/30 cursor-pointer transition-colors group">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-slate-400 mr-3 text-sm">history</span>
+<span class="text-on-surface">Carousel Edukasi Keuangan</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">north_west</span>
+</div>
+</div>
+<div class="mt-8 mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Kategori Populer</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:border-primary hover:text-primary cursor-pointer transition-all">🌙 Ramadhan 2024</span>
+<span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:border-primary hover:text-primary cursor-pointer transition-all">🍔 Makanan &amp; Minuman</span>
+<span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:border-primary hover:text-primary cursor-pointer transition-all">🏠 Real Estate</span>
+<span class="px-4 py-2 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:border-primary hover:text-primary cursor-pointer transition-all">💄 Beauty Tips</span>
+</div>
+</div>
+</div>
+<!-- SIMULATED KEYBOARD -->
+<div class="mt-auto w-full max-w-4xl bg-slate-200/90 backdrop-blur-md p-2 rounded-t-3xl shadow-2xl border-t border-white/50">
+<!-- Top Row (Functions) -->
+<div class="flex justify-between items-center px-4 py-2 mb-2">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-600">translate</span>
+<span class="material-symbols-outlined text-slate-600">emoji_emotions</span>
+<span class="material-symbols-outlined text-slate-600">mic</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-600">keyboard_hide</span>
+</div>
+</div>
+<!-- Keyboard Grid -->
+<div class="space-y-2 p-1">
+<!-- QWERTY Row 1 -->
+<div class="flex gap-1.5 justify-center">
+<div class="keyboard-key flex-[1]">Q</div>
+<div class="keyboard-key flex-[1]">W</div>
+<div class="keyboard-key flex-[1]">E</div>
+<div class="keyboard-key flex-[1]">R</div>
+<div class="keyboard-key flex-[1]">T</div>
+<div class="keyboard-key flex-[1]">Y</div>
+<div class="keyboard-key flex-[1]">U</div>
+<div class="keyboard-key flex-[1]">I</div>
+<div class="keyboard-key flex-[1]">O</div>
+<div class="keyboard-key flex-[1]">P</div>
+</div>
+<!-- QWERTY Row 2 -->
+<div class="flex gap-1.5 justify-center px-4">
+<div class="keyboard-key flex-[1]">A</div>
+<div class="keyboard-key flex-[1]">S</div>
+<div class="keyboard-key flex-[1]">D</div>
+<div class="keyboard-key flex-[1]">F</div>
+<div class="keyboard-key flex-[1]">G</div>
+<div class="keyboard-key flex-[1]">H</div>
+<div class="keyboard-key flex-[1]">J</div>
+<div class="keyboard-key flex-[1]">K</div>
+<div class="keyboard-key flex-[1]">L</div>
+</div>
+<!-- QWERTY Row 3 -->
+<div class="flex gap-1.5">
+<div class="keyboard-key flex-[1.5] bg-slate-300">
+<span class="material-symbols-outlined">shift</span>
+</div>
+<div class="keyboard-key flex-[1]">Z</div>
+<div class="keyboard-key flex-[1]">X</div>
+<div class="keyboard-key flex-[1]">C</div>
+<div class="keyboard-key flex-[1]">V</div>
+<div class="keyboard-key flex-[1]">B</div>
+<div class="keyboard-key flex-[1]">N</div>
+<div class="keyboard-key flex-[1]">M</div>
+<div class="keyboard-key flex-[1.5] bg-slate-300">
+<span class="material-symbols-outlined">backspace</span>
+</div>
+</div>
+<!-- Space Row -->
+<div class="flex gap-1.5">
+<div class="keyboard-key flex-[1.5] bg-slate-300 text-sm">?123</div>
+<div class="keyboard-key flex-[1] bg-slate-300">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div class="keyboard-key flex-[5] text-slate-400 text-sm">space</div>
+<div class="keyboard-key flex-[1]">.</div>
+<div class="keyboard-key flex-[2] bg-primary text-white font-bold">Search</div>
+</div>
+</div>
+<!-- Bottom handle -->
+<div class="flex justify-center py-4">
+<div class="w-32 h-1.5 bg-slate-400 rounded-full"></div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
