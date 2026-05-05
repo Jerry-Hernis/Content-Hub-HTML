@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | ContentHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "secondary": "#9b4500",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#d4e3ff",
+                      "on-secondary-fixed-variant": "#763300",
+                      "outline": "#717783",
+                      "surface-tint": "#0060ac",
+                      "on-secondary-container": "#672c00",
+                      "background": "#f8f9ff",
+                      "outline-variant": "#c1c7d3",
+                      "on-background": "#191c21",
+                      "on-secondary-fixed": "#331200",
+                      "on-primary-container": "#fdfcff",
+                      "on-tertiary-fixed": "#291800",
+                      "tertiary-fixed-dim": "#ffb953",
+                      "error-container": "#ffdad6",
+                      "inverse-on-surface": "#eff0f8",
+                      "on-primary-fixed": "#001c39",
+                      "on-tertiary-container": "#fffbff",
+                      "surface-container-low": "#f2f3fb",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f8f9ff",
+                      "on-tertiary-fixed-variant": "#633f00",
+                      "surface-container": "#ecedf5",
+                      "on-surface-variant": "#414751",
+                      "inverse-surface": "#2e3036",
+                      "inverse-primary": "#a4c9ff",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffdbc9",
+                      "tertiary": "#7f5300",
+                      "secondary-fixed-dim": "#ffb68d",
+                      "surface-container-highest": "#e1e2e9",
+                      "surface-container-high": "#e6e8ef",
+                      "on-surface": "#191c21",
+                      "surface-bright": "#f8f9ff",
+                      "tertiary-container": "#a06900",
+                      "on-primary-fixed-variant": "#004883",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fc8a40",
+                      "tertiary-fixed": "#ffddb4",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#2976c7",
+                      "surface-dim": "#d8dae1",
+                      "primary": "#005da7",
+                      "surface-variant": "#e1e2e9",
+                      "primary-fixed-dim": "#a4c9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "2xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #005da7 0%, #2976c7 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<main class="flex min-h-screen">
+<section class="hidden lg:flex w-1/2 relative overflow-hidden bg-primary items-center justify-center p-16">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Premium abstract gradient pattern with flowing deep blue and soft azure tones with subtle grain texture" class="w-full h-full object-cover" data-alt="Premium abstract gradient pattern with flowing deep blue and soft azure tones with subtle grain texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7DHiSQ0QiCjujM4t09HqBSjtRH2-VvUd5H8OD-RGoa1CnZeuI7MTLKiE8eB5QxudHcs_TVfdJbpba46gMUurOZpBE9YW_uygaBSmO2y1dBjBuKBPgz6h1uMNlTJ30NFGAEiM2Qm-fQ6LZTqASv1_ws2w44xaC2wj29rNeGJHE-JXm4jUlvCd1KJsuXnD-UF1NuYyXy2vE3dHEvVSmXTFgEzA2srcUwCcMtYPzjum07yIdZAZtJqAflwSN2d9HHcZr6fiLK-x5vg"/>
+</div>
+<div class="relative z-10 w-full max-w-xl">
+<div class="mb-12">
+<span class="text-on-primary text-xl font-extrabold tracking-tight">ContentHub</span>
+</div>
+<h1 class="text-5xl font-bold text-on-primary leading-tight mb-8">
+                    Kelola Konten Bisnis Kamu Lebih Cerdas
+                </h1>
+<p class="text-on-primary/80 text-lg mb-12 max-w-md">
+                    Bergabunglah dengan ribuan pemilik bisnis yang telah mentransformasi cara mereka merencanakan dan mengelola konten digital.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4 bg-surface/10 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/20">
+<img alt="Professional creative director smiling in a sunlit modern studio setting" class="w-full h-full object-cover" data-alt="Professional creative director smiling in a sunlit modern studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzGio_CPeCFtUV1A49_Qyv5qUPb8-muRndshHA7uIcVieJXfbckIoX3hMasyPXkj0t7psK8SIuFd1cwsdy-dqfe_7Sv3I1lWBN-_vooBXwrm9WCD-NI3lb67d3UyUZaveCuQyoRwhsTc-haeAXEw9r694xtZv5DzLLtLz8UjUi3vfdV88gTDc-I3xLfs12pBjgRd1PixhNQhux0ObZOi3L3QP-xFPIYmHXqd7DKCBFqOqXPL8xIivKuYi_mluKRBsK1SYx--8tQw"/>
+</div>
+<div>
+<p class="text-on-primary font-semibold">"ContentHub sangat membantu efisiensi tim!"</p>
+<p class="text-on-primary/60 text-sm italic">— Sarah, Owner Atelier Bali</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-12 flex justify-between items-center text-on-primary/40 text-xs tracking-widest uppercase">
+<span>© 2024 ContentHub</span>
+<div class="flex gap-6">
+<span>Privacy Policy</span>
+<span>Terms of Service</span>
+</div>
+</div>
+</section>
+<section class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 lg:p-24 bg-surface">
+<div class="w-full max-w-md">
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-on-background mb-2">Selamat Datang Kembali</h2>
+<p class="text-on-surface-variant">Masuk untuk melanjutkan ke Workspace Anda</p>
+</div>
+<button class="w-full flex items-center justify-center gap-3 bg-surface-container-low hover:bg-surface-container-high text-on-surface font-medium py-3 px-6 rounded-xl transition-all duration-200 group mb-8">
+<img alt="Google logo" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANjoascAmPxqpr0eQpu6QMrGUnTN_jXEkgf_o5QFq3IBvjm2KrJTWGdRLDiBQ3DzKe3IvsiBoxBp9sQjNhOhUzLzjstYsxDGjN3VhskUf57Ww9Qe1fpyHXz7SuWvxj-EE5kd231vvnfrWnzkvHU6AOzKepHgnjrp_1D8RQ8XZAK6y-NijTxMACFS8SLIhWixwZfB34HjzbTZlSxQEQW3Apb2ZO16z96yh2R-ufgGYLue_Slg0jnGAgXVXP_9ThU36PzE0Qqq4zfg"/>
+<span>Masuk dengan Google</span>
+</button>
+<div class="relative flex items-center mb-8">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-4 text-xs font-medium text-on-surface-variant/60 uppercase tracking-widest">Atau dengan Email</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant" for="email">Alamat Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface-variant/40" id="email" placeholder="nama@bisnis.com" type="email"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-on-surface-variant" for="password">Kata Sandi</label>
+<a class="text-xs font-bold text-primary hover:text-primary-container transition-colors" href="#">Lupa Kata Sandi?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-on-surface-variant/40" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant/60 hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full bg-gradient-primary text-on-primary font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all" type="submit">
+                            Masuk ke Dashboard
+                        </button>
+</div>
+</form>
+<div class="mt-12 text-center">
+<p class="text-on-surface-variant">
+                        Belum punya akun? 
+                        <a class="text-secondary font-bold hover:underline ml-1" href="#">Daftar Sekarang</a>
+</p>
+</div>
+</div>
+</section>
+</main>
+</body></html>

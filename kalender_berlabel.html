@@ -1,0 +1,447 @@
+<html class="light" lang="en"><head></head><body class="bg-surface selection:bg-primary-fixed">```html
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentHub - Calendar Content</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9ff;
+            color: #141b2b;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a more editorial look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f3ff;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #dce2f7;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb68d",
+                        "outline-variant": "#c1c7d3",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d3daef",
+                        "outline": "#717783",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-container": "#2976c7",
+                        "on-secondary-fixed-variant": "#763300",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface-variant": "#414751",
+                        "surface-variant": "#dce2f7",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#331200",
+                        "secondary": "#9b4500",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-highest": "#dce2f7",
+                        "secondary-container": "#fc8a40",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#672c00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#293040",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#005da7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "background": "#f9f9ff",
+                        "surface-container": "#e9edff",
+                        "surface-tint": "#0060ac",
+                        "on-surface": "#141b2b",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-primary-fixed": "#001c39",
+                        "tertiary": "#7f5300",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "2xl": "1.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<!-- SideNavBar (Updated to match SCREEN_35) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low flex flex-col p-6 space-y-8 z-50">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-white" data-icon="layers">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 text-blue-700 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="Budi Santoso" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTT2U8Svfck3rZiXxQRUxyllJgBS4q0SubEu_VPBxzrscPCfKrBLka09SkBVgGDUrTLdKEbb8UBRl-1dIk6OmD6BPTQZl1UOhqg0WtgmJ_TPkPZwnc6WU6MitmzBVjjGgHp0z5m08v7lP1lWps_RT7iSVoGCQOwDYZJDNx6aJVD6uGR55VK4ck4Ini1iWRti5rpWI8_Vm5w1cFtreQtm2oR7COV55RFRl8pRReHjraTxvpratlbOvZOzXcQkwC3KfX94LCyjDa1Q"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Budi Santoso</p>
+<p class="text-xs text-on-surface-variant truncate">Premium Plan</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-64 pt-10 px-8 pb-12 min-h-screen">
+<div class="max-w-7xl mx-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div>
+<span class="label-md text-primary font-bold uppercase tracking-[0.15em] mb-2 block">Calendar Overview</span>
+<h1 class="headline-md text-on-surface text-2xl font-bold">September 2024</h1>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-1.5 rounded-xl">
+<button class="p-2 hover:bg-white rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-6 py-2 bg-white shadow-sm rounded-lg font-semibold text-sm">Today</button>
+<button class="p-2 hover:bg-white rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="w-[1px] h-6 bg-slate-200 mx-1"></div>
+<div class="flex p-1 bg-surface-container-high rounded-lg gap-1">
+<button class="px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-500">Day</button>
+<button class="px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-slate-500">Week</button>
+<button class="px-4 py-1.5 bg-primary text-white rounded-md text-xs font-bold uppercase tracking-wider">Month</button>
+</div>
+</div>
+</div>
+<!-- Content Grid Strategy -->
+<div class="grid grid-cols-7 gap-px bg-slate-100 rounded-xl overflow-hidden shadow-sm border border-slate-100">
+<!-- Day Headers -->
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Sun</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Mon</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Tue</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Wed</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Thu</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Fri</span>
+</div>
+<div class="bg-surface-container-low py-4 text-center">
+<span class="label-md font-bold text-slate-500 uppercase tracking-widest text-[10px]">Sat</span>
+</div>
+<!-- Row 1 -->
+<div class="bg-surface h-40 p-3 opacity-50"><span class="text-xs font-bold">28</span></div>
+<div class="bg-surface h-40 p-3 opacity-50"><span class="text-xs font-bold">29</span></div>
+<div class="bg-surface h-40 p-3 opacity-50"><span class="text-xs font-bold">30</span></div>
+<div class="bg-surface h-40 p-3 opacity-50"><span class="text-xs font-bold">31</span></div>
+<!-- Sept 1 -->
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">1</span>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">2</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-secondary-container/20 text-on-secondary-container px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Promo</span>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">3</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">4</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">5</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="schedule">schedule</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Edukasi</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-[10px] text-slate-400">
+<span class="material-symbols-outlined text-[14px]" data-icon="image">image</span>
+                        Carousel Post
+                    </div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">6</span>
+</div>
+<!-- Today Subtly Highlighted -->
+<div class="bg-primary-fixed/20 h-40 p-3 border-2 border-primary/20 relative">
+<div class="absolute top-0 right-0 p-2">
+<span class="bg-primary text-white text-[9px] px-2 py-0.5 rounded-full font-bold uppercase">Today</span>
+</div>
+<span class="text-xs font-extrabold text-primary">7</span>
+<div class="mt-4 space-y-2">
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Engagement</span>
+</div>
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Portrait of a smiling young creative professional woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbTjJAgkf4Po_nKlmgdhoSc55Z5tj_uXfjM3mRlp08d4ywUII2zrm9NNmDs2jVDjADYS2k_KyUjgfZs751_-3GmHvZIYDSaYUS_0ndXy-CKqXLJsGZ8UsQJUzcV-7I4QfEeEx5Dp6a-qt18LyfH_yLcakje1XaNRinaznbfQqkJsl4L9yTGH56P4s0YXn3GIkrKpigjj09n1Tj-6WHXcsdZxHMhOnq_8HPCdZLXxf4pA8ekfAqO8gUZwWMByGRx5w1tyq0WR8Xhw"/>
+<div class="w-6 h-6 rounded-full bg-slate-200 border-2 border-white flex items-center justify-center text-[8px] font-bold">+2</div>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">8</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">9</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-secondary-container/20 text-on-secondary-container px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Promo</span>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">10</span>
+</div>
+<!-- Row 3 -->
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">11</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">12</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">13</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Edukasi</span>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Engagement</span>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">14</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">15</span>
+<span class="material-symbols-outlined text-[16px] text-amber-500" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="text-[10px] bg-surface-container-high p-2 rounded-lg text-slate-600 font-medium italic">
+                    Big Launch Campaign
+                </div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">16</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">17</span>
+</div>
+<!-- Row 4 -->
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">18</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">19</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Edukasi</span>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">20</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">21</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold">22</span>
+</div>
+<div class="space-y-1.5">
+<div class="bg-secondary-container/20 text-on-secondary-container px-2 py-1 rounded-md flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-bold uppercase tracking-tight">Promo</span>
+</div>
+</div>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">23</span>
+</div>
+<div class="bg-surface h-40 p-3 group hover:bg-surface-container-lowest transition-colors">
+<span class="text-xs font-bold">24</span>
+</div>
+</div>
+<!-- Bento Sidebar / Info Section -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Upcoming Card -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-xl p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="title-md font-bold">Upcoming Distribution</h3>
+<a class="text-xs font-bold text-primary uppercase tracking-wider hover:underline" href="#">View Queue</a>
+</div>
+<div class="space-y-4">
+<div class="bg-white p-4 rounded-xl flex items-center justify-between group cursor-pointer hover:shadow-md transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Vibrant digital illustration of social media icons floating in a modern 3D space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvfMHiqP1fu36fLuXqQjrK6W2RZUpvZAkalrbwTTO_JEdNpGjhJBovqVg0wNwfpb4iPSm_aPnavKX1IVV3F97x5suvFm8mNt5UXjyppYZcQ2vY-pLyx7oKRIZRVz5WbwEalh9FsIK7CYV8N7MaSjMKPtF9QM8qgCO4ykeLOhXpTQkV3ZQOEdBu6DZJdQhb6uMxly91-ZwfBNMofEePAX_L8IsOm3ipj5KCpYwX9wPzmHnEb0wb06xVsvPMO5RM-xVEOUMocvPlpA"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">Tips Memilih Supplier Bahan Baku</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Instagram</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-tighter">Edukasi</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold">Besok, 09:00</p>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+<div class="bg-white p-4 rounded-xl flex items-center justify-between group cursor-pointer hover:shadow-md transition-all opacity-80">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sleek modern minimal digital marketing workspace with laptop and coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmbFG1GPENLB7cYl5eeW6bYjdpW6nUXpf-82M4p6HzNO85rCgrjbVgyB0uBX1hOYlB53ZfGotOCOtiuom456RYCAOELjXQ1llvGvWshblnLalnjmgHcmKOqmEpP5sPb1J3xyVfF2x0VMxQBgHko5CKk0lZZIRw_xiz-nmgoyqauTjB87Ow6MIEHlrjYiS8PIQFT89q8zK3pizBgxkQCshURqRcv-i5dFsDFDfQ_D3MWUUde7X52LN0K_osgBi5hz5Ms1t-TvIO_g"/>
+</div>
+<div>
+<h4 class="text-sm font-bold">Flash Sale Gajian: Diskon 50%</h4>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">TikTok</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Promo</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold">Sep 9, 19:00</p>
+<span class="material-symbols-outlined text-slate-300" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Statistics / Legend -->
+<div class="bg-surface-container-highest rounded-xl p-6">
+<h3 class="title-md font-bold mb-6 text-on-surface">Monthly Balance</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Edukasi</span>
+<span class="text-sm font-bold">45%</span>
+</div>
+<div class="w-full h-2 bg-white/50 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Promo</span>
+<span class="text-sm font-bold">30%</span>
+</div>
+<div class="w-full h-2 bg-white/50 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[30%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Engagement</span>
+<span class="text-sm font-bold">25%</span>
+</div>
+<div class="w-full h-2 bg-white/50 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[25%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-white/20">
+<button class="w-full py-3 bg-primary text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                        Create New Content
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-[28px]" data-icon="edit_calendar" style="font-variation-settings: 'FILL' 1;">edit_calendar</span>
+</button>
+```</body></html>

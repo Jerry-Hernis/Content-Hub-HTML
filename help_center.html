@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentHub Help Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb68d",
+                        "outline-variant": "#c1c7d3",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d3daef",
+                        "outline": "#717783",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-container": "#2976c7",
+                        "on-secondary-fixed-variant": "#763300",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface-variant": "#414751",
+                        "surface-variant": "#dce2f7",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#331200",
+                        "secondary": "#9b4500",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-highest": "#dce2f7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#672c00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#293040",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#005da7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "background": "#f9f9ff",
+                        "surface-container": "#e9edff",
+                        "surface-tint": "#0060ac",
+                        "on-surface": "#141b2b",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-primary-fixed": "#001c39",
+                        "tertiary": "#7f5300",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "2xl": "1.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 32px -4px rgba(20, 27, 43, 0.04);
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-50 transition-all duration-200 ease-in-out">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBc8fvOYeNXxlbHOSI2E6fF2c8bXnHWpX72rcBt6xCjUjuGcMR-isD1ox1Z1DphO7T0GLUSDjloCcmsuIVCwlLmDdETPFm8SUoqECvVeE8UmO-Saxn1hbE_DUhybyNy01r6nbEiEfOtpKjFjkfR20boPSMJhHBTYKc7awLQWAL-CAzbPagzf2pn_K3RsYvyuhlyBgvritjPX4dF_e6S3lpXmWAvDzQ5X_qo7aueOVrHRJTVOHOl6eL32-9vzMRPUDVbpfN-WFlrA"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen">
+<!-- Hero Search Section -->
+<section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+<img class="w-full h-full object-cover opacity-20" data-alt="clean modern office space with large windows and soft daylight providing a calm architectural atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0RNXDcFCVTovddmVUEdy1VkHI72kU1tMf7DsHmIwu6BU4p8bGqIQa8qHjSXQw2TS0YOQ7DShXhzoH34LLc2vXhTyvi7-8O-x8NY55IGqalQpN61S_Ib1CUcJuOyD-ScJsO04Z5rZKkuhBNus0--ueEjR2miL_dNTLJ8u57Qg1SjuyG9OO90gTVNE-q1qOldpov73KBDpZPXSkeGSdsFtdKMh6Gm8vrcttPiS7f8GCsOgizjJ-SWMd8Xa1pWmIBBYCRpLhUigtVQ"/>
+</div>
+<div class="relative z-10 w-full max-w-2xl px-6 text-center">
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-4 block">Help Center</span>
+<h2 class="text-4xl md:text-5xl font-extrabold text-on-surface mb-8 tracking-tight">Apa yang bisa kami bantu?</h2>
+<div class="relative editorial-shadow rounded-full overflow-hidden">
+<input class="w-full h-16 pl-14 pr-6 bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/20 text-lg font-body" placeholder="Cari bantuan..." type="text"/>
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-primary text-2xl">search</span>
+</div>
+</div>
+</section>
+<div class="max-w-7xl mx-auto px-12 -mt-16 relative z-20 pb-24">
+<!-- Category Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+<div class="group bg-surface-container-lowest p-8 rounded-xl editorial-shadow hover:-translate-y-1 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Getting Started</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Pelajari dasar-dasar ContentHub untuk memulai perjalanan Anda.</p>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-xl editorial-shadow hover:-translate-y-1 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Billing</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Informasi mengenai paket langganan, invoice, dan metode pembayaran.</p>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-xl editorial-shadow hover:-translate-y-1 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Calendar</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Maksimalkan penjadwalan konten Anda dengan fitur kalender pintar.</p>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-xl editorial-shadow hover:-translate-y-1 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-outline mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">dashboard_customize</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Templates</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Gunakan template yang sudah dikurasi untuk mempercepat proses desain.</p>
+</div>
+</div>
+<!-- Popular FAQs (Asymmetric Content Section) -->
+<div class="flex flex-col lg:flex-row gap-16 items-start mb-24">
+<div class="lg:w-1/3">
+<span class="text-xs font-bold tracking-[0.2em] text-primary uppercase mb-3 block">Bantuan Cepat</span>
+<h2 class="text-3xl font-extrabold text-on-surface mb-6 leading-tight">Pertanyaan Populer</h2>
+<p class="text-on-surface-variant leading-relaxed">Kami merangkum pertanyaan yang paling sering diajukan oleh pengguna baru maupun profesional untuk membantu Anda lebih cepat.</p>
+<div class="mt-8 space-y-4">
+<div class="flex items-center gap-3 text-primary font-bold cursor-pointer group">
+<span>Lihat semua dokumentasi</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="lg:w-2/3 w-full space-y-4">
+<!-- FAQ Accordion Items -->
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-all hover:bg-surface-container-low border border-transparent hover:border-outline-variant/10 cursor-pointer">
+<div class="flex justify-between items-center group">
+<h4 class="text-base font-bold text-on-surface">Bagaimana cara menghubungkan akun Instagram Bisnis?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-all hover:bg-surface-container-low border border-transparent hover:border-outline-variant/10 cursor-pointer">
+<div class="flex justify-between items-center group">
+<h4 class="text-base font-bold text-on-surface">Apakah saya bisa menjadwalkan konten Video dan Reels?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-all hover:bg-surface-container-low border border-transparent hover:border-outline-variant/10 cursor-pointer">
+<div class="flex justify-between items-center group">
+<h4 class="text-base font-bold text-on-surface">Bagaimana kebijakan pengembalian dana (Refund)?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-all hover:bg-surface-container-low border border-transparent hover:border-outline-variant/10 cursor-pointer">
+<div class="flex justify-between items-center group">
+<h4 class="text-base font-bold text-on-surface">Dapatkan saya mengundang tim ke dalam workspace?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 editorial-shadow transition-all hover:bg-surface-container-low border border-transparent hover:border-outline-variant/10 cursor-pointer">
+<div class="flex justify-between items-center group">
+<h4 class="text-base font-bold text-on-surface">Berapa batas maksimal konten dalam satu bulan?</h4>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Card -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-12 text-white">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-64 h-64 bg-secondary/20 rounded-full blur-2xl"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="text-center md:text-left max-w-xl">
+<h3 class="text-3xl font-extrabold mb-4 tracking-tight">Butuh bantuan lebih lanjut?</h3>
+<p class="text-primary-fixed/80 text-lg">Tim support kami tersedia 24/7 untuk membantu masalah teknis atau pertanyaan seputar akun Anda.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-surface-container-lowest text-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat_bubble</span>
+                            Hubungi Support
+                        </button>
+<button class="bg-primary-fixed-dim/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">mail</span>
+                            Kirim Email
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Tonal Base -->
+<footer class="bg-surface-container-low py-12 px-12">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="text-xl font-extrabold tracking-tight text-blue-700">ContentHub</span>
+<span class="text-slate-400 text-sm">© 2024</span>
+</div>
+<div class="flex gap-8 text-sm text-on-surface-variant font-medium">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Community</a>
+<a class="hover:text-primary transition-colors" href="#">API Docs</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

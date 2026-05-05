@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb68d",
+                    "outline-variant": "#c1c7d3",
+                    "error": "#ba1a1a",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-dim": "#d3daef",
+                    "outline": "#717783",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "primary-container": "#2976c7",
+                    "on-secondary-fixed-variant": "#763300",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed-dim": "#ffb953",
+                    "on-surface-variant": "#414751",
+                    "surface-variant": "#dce2f7",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "inverse-on-surface": "#edf0ff",
+                    "surface-container-low": "#f1f3ff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#331200",
+                    "secondary": "#9b4500",
+                    "on-tertiary-fixed": "#291800",
+                    "surface-container-highest": "#dce2f7",
+                    "secondary-container": "#fc8a40",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#672c00",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#293040",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#141b2b",
+                    "surface-container-high": "#e1e8fd",
+                    "error-container": "#ffdad6",
+                    "primary": "#005da7",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#a06900",
+                    "background": "#f9f9ff",
+                    "surface-container": "#e9edff",
+                    "surface-tint": "#0060ac",
+                    "on-surface": "#141b2b",
+                    "secondary-fixed": "#ffdbc9",
+                    "on-primary-fixed": "#001c39",
+                    "tertiary": "#7f5300",
+                    "primary-fixed": "#d4e3ff",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-primary-fixed-variant": "#004883"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .editorial-spacing {
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Shell (Updated style and order from SCREEN_35) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-50">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold rounded-xl" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<!-- Active State: Template (based on original context of being on the template results page) -->
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold rounded-xl" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15 mt-auto">
+<div class="flex items-center space-x-3 px-2">
+<img alt="Rina Wijaya" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPbLmMIQolhJF6JiDLlf4T_XFdkBITtOe8qnd9Ecby_QdFJZSTzEraHKGNFA0O0do2Nb9s6nGcbJIQykibmWIue8zN1HkXwrl97mKOB4ziSV1p1dop0xNtz-Hr-7wQhin0AgN_oD7ufF8XYNys2vb7gz5AuFi6W_yOcuE52wSdXak4CBMWASDT4EKEy02QHGvz_P-YRvGukKwGECuUlfhTZt7Zk9L9Du-DuYn0QKkCit37ex1gUgbCSY_ivz_xMJ5QGVASsjWlw"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none flex justify-between items-center px-8 z-40">
+<div class="flex items-center flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all text-sm" placeholder="Cari template..." type="text" value="Fashion"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+</div>
+</header>
+<!-- Main Content Stage -->
+<main class="ml-64 pt-24 px-10 pb-12 min-h-screen">
+<!-- Header Section -->
+<header class="mb-10">
+<div class="flex items-end gap-2 mb-2">
+<span class="label-md uppercase font-bold text-primary tracking-widest editorial-spacing">Search Results</span>
+</div>
+<h1 class="headline-md text-on-surface font-extrabold">Hasil untuk: <span class="text-primary italic">Fashion</span></h1>
+<p class="body-lg text-on-surface-variant mt-2">Ditemukan 12 template kategori fashion yang siap untuk dikurasi.</p>
+</header>
+<!-- Filter Bar (Tonal Layering) -->
+<div class="flex items-center gap-4 mb-8">
+<button class="flex items-center gap-2 px-6 py-2.5 bg-surface-container-high rounded-full text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                Semua Format
+            </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-surface-container-high rounded-full text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors">
+                Terpopuler
+            </button>
+<button class="flex items-center gap-2 px-6 py-2.5 bg-surface-container-high rounded-full text-on-surface-variant font-semibold text-sm hover:bg-surface-container-highest transition-colors">
+                Terbaru
+            </button>
+<div class="ml-auto flex items-center gap-2 text-slate-400 text-sm">
+<span>Urutkan:</span>
+<button class="font-bold text-on-surface flex items-center gap-1">
+                    Relevansi <span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Grid of Results (Architectural Bento-ish Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(20,27,43,0.08)]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="minimalist fashion shoot with elegant beige clothing on a clean studio background with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-4_5RKg-umRzvjp_x7_KGRHOe9pv-Xfqgk0C6rpcjUYblvr5cUsN4FlcPKeZMajfPdDRIWuY5Eo5BT9Hl2riJTxOMYcykhpmUESis1dBTFu7Ls3_2TpJAmhZyG1Rpm7YpB9A3Zv5XtcWuZnVOZUuVonJ_70aKYxMWQK35Gh3KA0DH3hKfxqV_74EmQ4iTenfuUBttqpx9K8pIUYJxrE-b9feY9b4uZY2dWgYhIDB1PPC5gxB7qOB12AwE0o6MnTIU_lW9yDcj-Q"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase editorial-spacing">Promo</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span> Gunakan Template
+                        </button>
+</div>
+</div>
+<div class="p-5">
+<h3 class="title-md font-bold mb-1 group-hover:text-primary transition-colors">Summer Collection Reveal</h3>
+<p class="text-sm text-on-surface-variant">Instagram Story • 1080x1920</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(20,27,43,0.08)]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vibrant colorful street style fashion photography featuring bold yellow and blue contrasts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfH6ZTJTkXG2JicQb7iYioAHxoK_JQq_4WYepJnGfO8CuRg9TJ2noYKmG9ufDKgmFj8enIsw12E1tz9V2IC9Vnd9vYEKkKYiWyECi8xDRG884SGJFwMnPq3tHdFTXkpYlEZTpmqX9e3t7Os4WjcfMQM10r8EZmULbV9iHVeHcg0raTKL8OOggvKSIyfsrUG-5t_e_FWswsYgCxdypCAFh7xnNFS0LOitgsB6U690RDkQC5Q8JUHqBjwanLlrRxJYefPbprzpsedQ"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase editorial-spacing">Engage</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span> Gunakan Template
+                        </button>
+</div>
+</div>
+<div class="p-5">
+<h3 class="title-md font-bold mb-1 group-hover:text-primary transition-colors">Pick Your OOTD Quiz</h3>
+<p class="text-sm text-on-surface-variant">Instagram Feed • 1080x1080</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(20,27,43,0.08)]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close-up of luxury fabric textures and high-end clothing details with cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCJi0Y_-sINQ5MKELqF1FYaRRJpq_trnxmyi3dFqtXvg4jSmAzO-XdE2VID_rnAtf0xK9H4PlnKqiuv_PNTM3QI4l1XhdTvxevsZG_uCAKsZOPGVmveG74HRhgo5rlU49zopRNyab5AeE4p4CIExEp7wRWAB0ZZrNxQIJvEkKEscTTOGeDoGXqBrp57jAyYqOqeRXaNi5kTzFGqofMoAaAjARlXfU4VL0RanJVwukGurE-HBPbgZENflAuklstdRSdkHXjMSEdMw"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold px-3 py-1 rounded-full uppercase editorial-spacing">Edu</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span> Gunakan Template
+                        </button>
+</div>
+</div>
+<div class="p-5">
+<h3 class="title-md font-bold mb-1 group-hover:text-primary transition-colors">How to Style Linen</h3>
+<p class="text-sm text-on-surface-variant">Instagram Carousel • 5 Slides</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-[0_12px_32px_-4px_rgba(20,27,43,0.08)]">
+<div class="aspect-[4/5] relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="urban fashionista walking in a stylish coat with bokeh city background in the late afternoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDafQiIrc38BG3rbAME-KcU1JdEnScl5-M_F0swEJKFGX8pOypDIitVcsoM_wMyrnwCM5ICV0WWUZeMK7WatgAu0nCBfB4smH8I77816vAf0QE8tV7ZnJJDIm_IR2ON03T5oGKLAnUKzOC6NqgV5Jx_uRgSOjKKIlcOHlrOq97egSTStQ300_6FRI_J71VPbGWyycYR1lTj_HvvNuxn5Y6QBj7xronU84CoFfED5I1Jjx3S_zkTS7CJCurqtKqHCd8PUjcf24RMng"/>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase editorial-spacing">Promo</span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">edit</span> Gunakan Template
+                        </button>
+</div>
+</div>
+<div class="p-5">
+<h3 class="title-md font-bold mb-1 group-hover:text-primary transition-colors">Flash Sale: Fall Vibes</h3>
+<p class="text-sm text-on-surface-variant">TikTok Video • 9:16</p>
+</div>
+</div>
+</div>
+<!-- Optional: Empty State (Suppressed if results exist) -->
+<div class="hidden flex flex-col items-center justify-center py-24 text-center">
+<div class="w-64 h-64 mb-8 opacity-20">
+<span class="material-symbols-outlined text-[120px] text-primary">search_off</span>
+</div>
+<h2 class="headline-md font-bold text-on-surface mb-2">Oops, template tidak ditemukan</h2>
+<p class="body-lg text-on-surface-variant mb-8 max-w-md mx-auto">Kami tidak dapat menemukan hasil untuk kata kunci tersebut. Coba gunakan kata kunci yang lebih umum atau jelajahi koleksi kami.</p>
+<button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-white font-bold rounded-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                Lihat Semua
+            </button>
+</div>
+<!-- Footer / Pagination -->
+<div class="mt-16 flex items-center justify-between border-t border-slate-100 pt-8">
+<p class="text-sm text-on-surface-variant">Menampilkan 1-12 dari 48 template</p>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-slate-400">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-semibold">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-semibold">3</button>
+<span class="px-2 text-slate-300">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-semibold">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high text-slate-600">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+</body></html>
