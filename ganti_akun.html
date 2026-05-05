@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ganti Akun - ContentHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb68d",
+                        "outline-variant": "#c1c7d3",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d3daef",
+                        "outline": "#717783",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-container": "#2976c7",
+                        "on-secondary-fixed-variant": "#763300",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface-variant": "#414751",
+                        "surface-variant": "#dce2f7",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#331200",
+                        "secondary": "#9b4500",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-highest": "#dce2f7",
+                        "secondary-container": "#fc8a40",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#672c00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#293040",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#005da7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "background": "#f9f9ff",
+                        "surface-container": "#e9edff",
+                        "surface-tint": "#0060ac",
+                        "on-surface": "#141b2b",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-primary-fixed": "#001c39",
+                        "tertiary": "#7f5300",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f9f9ff;
+            background-image: radial-gradient(at 0% 0%, rgba(41, 118, 199, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(155, 69, 0, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-hidden">
+<!-- Dashboard Background (Underlay) -->
+<div class="flex h-screen bg-mesh">
+<!-- SideNavBar - Suppressed for focus journey -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-900 flex flex-col h-full py-6 font-manrope text-sm font-medium z-0 blur-[2px]">
+<div class="px-6 mb-8">
+<div class="text-xl font-extrabold tracking-tight text-blue-700 dark:text-blue-500">ContentHub</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-[0.1em] mt-1">SME Content Manager</div>
+</div>
+<nav class="flex-1 space-y-1 px-4">
+<div class="flex items-center gap-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 border-l-4 border-blue-600">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span>Dashboard</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 transition-colors">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<span>Calendar</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 transition-colors">
+<span class="material-symbols-outlined text-xl">layers</span>
+<span>Template</span>
+</div>
+</nav>
+</aside>
+<!-- Main Content (Blurred) -->
+<main class="ml-64 flex-1 p-10 blur-sm">
+<header class="mb-10 flex justify-between items-end">
+<div>
+<span class="text-xs font-bold uppercase tracking-widest text-primary mb-2 block">Overview</span>
+<h1 class="text-4xl font-extrabold text-on-surface tracking-tight">Performa Konten</h1>
+</div>
+</header>
+<div class="grid grid-cols-3 gap-8">
+<div class="col-span-2 bg-surface-container-low p-8 rounded-xl aspect-[16/9]"></div>
+<div class="bg-surface-container-low p-8 rounded-xl"></div>
+</div>
+</main>
+</div>
+<!-- Modal Backdrop -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-on-surface/40 backdrop-blur-md">
+<!-- Modal Container: Architectural Editorial Style -->
+<div class="w-full max-w-md mx-4 transform transition-all">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_-4px_rgba(20,27,43,0.08)] overflow-hidden">
+<!-- Modal Header -->
+<div class="p-8 pb-4 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-fixed mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">switch_account</span>
+</div>
+<h2 class="text-2xl font-extrabold text-on-surface tracking-tight leading-tight">Ganti Akun</h2>
+<p class="text-on-surface-variant text-sm mt-2 font-medium">Pilih akun yang ingin Anda gunakan sekarang.</p>
+</div>
+<!-- Account List: Tonal Layering (No Dividers) -->
+<div class="px-6 py-4 space-y-3">
+<!-- Active Account Item -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl border border-primary/10">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img alt="Active User" class="w-12 h-12 rounded-full object-cover" data-alt="Professional headshot of a smiling man with neat beard in a minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtJnJ0jrTdkZsY52El45Ep00A53dACVe1xjNCBsqM_abFPni0e5VdLoW_LI5z9kRQGLVTaMTQh2V8y1VPFjSA3YjW0zeVA272tbGO9QGBAN-k4zg9ghSM3wkeEwgIZ2f8LQ7FfRuVeRmTPhCq9RKfr-hcUs200zXFI-O9QqV5uDgRX986d5BhVcgBhX0bM8o9bKlkUR85WtEK5eZnOcry_TiC8-ZfADw3tLJjUzqTR2WtAIE9Xla6TmA253WNpwmOQqqZqwmnqZw"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-surface-container-lowest rounded-full"></div>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Budi Darmawan</p>
+<p class="text-xs text-on-surface-variant">budi.d@contenthub.id</p>
+</div>
+</div>
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-primary bg-primary-fixed px-2 py-1 rounded">Aktif</span>
+</div>
+<!-- Secondary Account Item 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl group">
+<div class="flex items-center gap-4">
+<img alt="Secondary User" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Close up portrait of a confident young woman with creative styling and soft daylight lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlVDipjz_Yr8ZNVVvIat3awrOr9u8XSYIMmeg2LA_O7Fc1vriGTnBK8JV5c5YTRcbgUImm9TrUXnwf7yT1Sr2LYodehX3b4DRYBB7MbtCyUzvSJfVjl5VtFy7FWnEXzaBRLe3JjCfJqt8hnYXNfxATF6K92fBDM5H53id7onA7lMHYvcNnZ-ksSQ6c4tFJdlqgOjOYZSSKKT_ckM2MZSR0d-YIuK0JH5-XBriKc3yRrQexptuAbveKtgYxrIh6RUYgXAJEXU0zag"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Siska Studio</p>
+<p class="text-xs text-on-surface-variant">hello@siskastudio.com</p>
+</div>
+</div>
+<button class="px-4 py-2 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all scale-95 active:scale-90">
+                            Switch
+                        </button>
+</div>
+<!-- Secondary Account Item 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest hover:bg-surface-container-low transition-colors rounded-xl group">
+<div class="flex items-center gap-4">
+<img alt="Secondary User" class="w-12 h-12 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Friendly young creative professional man wearing glasses in a brightly lit modern office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmZHX4Yk0zwLlIpQCjqQz9T37JYj4mHilm5-SF7V-w4i58RH2Sto1cFwI_r0nq2o9BTCjPrfWMMbDiltQvdfOpRrxN3GSxN385F2I5hP1boKq1afpONRFMvbVHAJAGuqoErHW4bWovEEdodoTgmNWhXTq9gQ2Z8Qn-RD4pilkLi9TduYAyl5SRIS2U29vQjxfUXdHbcv8befdPV_rWZ7nSiuhiPYw6YodtlS2FDtMjEkq6x-aEYmcN4BKU91TGNnAj9M7HG80KEw"/>
+<div>
+<p class="text-sm font-bold text-on-surface">Digital Agency ID</p>
+<p class="text-xs text-on-surface-variant">admin@digitalagency.id</p>
+</div>
+</div>
+<button class="px-4 py-2 bg-primary-fixed text-on-primary-fixed text-xs font-bold rounded-lg hover:bg-primary-container hover:text-on-primary transition-all scale-95 active:scale-90">
+                            Switch
+                        </button>
+</div>
+</div>
+<!-- Footer Action: Add Account -->
+<div class="p-6 bg-surface-container-low/50">
+<button class="w-full flex items-center justify-center gap-2 p-4 bg-white hover:bg-surface-container-highest transition-colors rounded-xl border-2 border-dashed border-outline-variant/30 text-primary font-bold text-sm">
+<span class="material-symbols-outlined">add_circle</span>
+                        Tambah Akun Baru
+                    </button>
+<button class="w-full mt-6 text-center text-xs font-bold text-on-surface-variant/60 uppercase tracking-widest hover:text-error transition-colors">
+                        Batal
+                    </button>
+</div>
+</div>
+<!-- Branding Accent -->
+<p class="text-center mt-6 text-[10px] text-surface-container-lowest/70 font-bold uppercase tracking-[0.2em]">
+                ContentHub Identity Security
+            </p>
+</div>
+</div>
+</body></html>

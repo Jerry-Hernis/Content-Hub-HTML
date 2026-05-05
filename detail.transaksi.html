@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb68d",
+                    "outline-variant": "#c1c7d3",
+                    "error": "#ba1a1a",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-dim": "#d3daef",
+                    "outline": "#717783",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "primary-container": "#2976c7",
+                    "on-secondary-fixed-variant": "#763300",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed-dim": "#ffb953",
+                    "on-surface-variant": "#414751",
+                    "surface-variant": "#dce2f7",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "inverse-on-surface": "#edf0ff",
+                    "surface-container-low": "#f1f3ff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#331200",
+                    "secondary": "#9b4500",
+                    "on-tertiary-fixed": "#291800",
+                    "surface-container-highest": "#dce2f7",
+                    "secondary-container": "#fc8a40",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#672c00",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#293040",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#141b2b",
+                    "surface-container-high": "#e1e8fd",
+                    "error-container": "#ffdad6",
+                    "primary": "#005da7",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#a06900",
+                    "background": "#f9f9ff",
+                    "surface-container": "#e9edff",
+                    "surface-tint": "#0060ac",
+                    "on-surface": "#141b2b",
+                    "secondary-fixed": "#ffdbc9",
+                    "on-primary-fixed": "#001c39",
+                    "tertiary": "#7f5300",
+                    "primary-fixed": "#d4e3ff",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-primary-fixed-variant": "#004883"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-full h-16 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl flex justify-between items-center px-8 z-40 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex items-center gap-4 lg:ml-64">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">arrow_back</button>
+<h1 class="text-on-surface font-headline font-bold text-lg tracking-tight">Pembayaran E-Wallet</h1>
+</div>
+<div class="flex items-center gap-6">
+</div>
+</header>
+<main class="pt-24 pb-12 px-4 md:px-8 max-w-4xl mx-auto lg:ml-[22rem]">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Left Column: QR & Timer -->
+<div class="md:col-span-7 flex flex-col gap-6">
+<!-- QR Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_-4px_rgba(20,27,43,0.04)] text-center relative overflow-hidden">
+<!-- Glassy Header inside card -->
+<div class="flex justify-center mb-6">
+<img alt="GoPay Logo" class="h-10 object-contain" data-alt="Gopay official brand logo for payment wallet interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfGQayBvSOqrfLYOU9s1dammtjUrBc2gJoqaQU50Wd2BUINoCoCfB1bfEB3ntkHpkA1UKPgSjgyUEuJg6too2J2zYksN87y4WEIT0yGiiKeOH9lsYZZnDc1YGJbX6vzixrkhe-xJWUOWcfPt3yj0IXX2AlSfptROptat_GrB7ePoiYV8kZoJt102icdtFOKVAQO3Sh4o0TmQiHhZ1u35WlNKedVQYBC2Lq2llJQh1wH3n_3IOuris6fj8HLj3LDK0cdufzfm0kig"/>
+</div>
+<div class="mb-4 inline-flex items-center gap-2 px-3 py-1 bg-error-container text-on-error-container rounded-full text-xs font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                        Bayar sebelum 14:59
+                    </div>
+<div class="relative p-6 bg-white rounded-xl border-4 border-surface-container-low mx-auto w-fit mb-6">
+<img alt="Transaction QR" class="w-60 h-60" data-alt="large scannable qr code with high contrast black and white pattern for secure digital payment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBIdh6lcB4z7Beydf3ld5llwmM69woZhA-LABluTcJVjMhtTXNS44OCK5BZ6U_EPTsC6CJwa7e53rNTk7IlUwAWQCr4CE8qqnu5d3ElghgiSSIlq9qo8iahWowY4f9faYPS1pY5nINTARZ9-7-3ckIBYpybIUB-mlGR9FGlT7K2n7WydjD48eVrYA_OfJgCFWQjCRschg58OmmFXI7fqBhqPovKDlHNouQoL7lfgGe2REWyD3YMV2od2BV9dYxilTt2R23VZobmg"/>
+<!-- Decorative Corners -->
+<div class="absolute -top-1 -left-1 w-6 h-6 border-t-4 border-l-4 border-primary rounded-tl-lg"></div>
+<div class="absolute -top-1 -right-1 w-6 h-6 border-t-4 border-r-4 border-primary rounded-tr-lg"></div>
+<div class="absolute -bottom-1 -left-1 w-6 h-6 border-b-4 border-l-4 border-primary rounded-bl-lg"></div>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 border-b-4 border-r-4 border-primary rounded-br-lg"></div>
+</div>
+<p class="text-on-surface-variant text-sm font-medium mb-2">Scan QR code menggunakan aplikasi GoPay</p>
+<div class="flex justify-center items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">download</span>
+<span class="text-sm">Unduh QR Code</span>
+</div>
+</div>
+<!-- Transaction Details Bento -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<p class="text-on-surface-variant text-[10px] font-bold tracking-widest uppercase mb-1">Total Tagihan</p>
+<p class="text-xl font-headline font-extrabold text-on-surface">Rp 249.000</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl">
+<p class="text-on-surface-variant text-[10px] font-bold tracking-widest uppercase mb-1">Order ID</p>
+<p class="text-lg font-headline font-bold text-on-surface">CH-8829-XL</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Instructions -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<!-- Instruction Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_-4px_rgba(20,27,43,0.04)]">
+<h2 class="font-headline font-bold text-lg mb-6">Instruksi Pembayaran</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-extrabold text-sm">1</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Buka aplikasi <span class="font-bold text-on-surface">GoPay</span> atau <span class="font-bold text-on-surface">Gojek</span> di ponsel Anda.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-extrabold text-sm">2</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Pilih menu <span class="font-bold text-on-surface">Bayar</span> pada layar utama aplikasi.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-extrabold text-sm">3</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Arahkan kamera ponsel Anda ke <span class="font-bold text-on-surface">QR Code</span> yang tersedia di layar ini.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-extrabold text-sm">4</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Periksa nominal pembayaran dan tekan <span class="font-bold text-on-surface">Konfirmasi &amp; Bayar</span>.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-extrabold text-sm">5</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Masukkan <span class="font-bold text-on-surface">PIN GoPay</span> Anda untuk menyelesaikan transaksi.</p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high">
+<div class="flex items-center gap-3 text-secondary mb-4">
+<span class="material-symbols-outlined">verified_user</span>
+<p class="text-xs font-semibold">Transaksi Terenkripsi &amp; Aman</p>
+</div>
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold tracking-tight shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                            Saya Sudah Bayar
+                        </button>
+</div>
+</div>
+<!-- Ad/Info Surface -->
+<div class="bg-primary-fixed text-on-primary-fixed-variant p-6 rounded-xl relative overflow-hidden group">
+<div class="relative z-10">
+<h3 class="font-headline font-extrabold text-sm mb-2">Butuh Bantuan?</h3>
+<p class="text-xs opacity-90 mb-4 leading-relaxed">Jika Anda mengalami kendala saat memproses pembayaran, hubungi tim dukungan kami yang siap membantu 24/7.</p>
+<a class="text-xs font-bold underline decoration-2 underline-offset-4" href="#">Hubungi Support</a>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-7xl opacity-10 rotate-12 group-hover:rotate-0 transition-transform duration-500">support_agent</span>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar - (Updated to match SCREEN_35) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-40 transition-all duration-200 ease-in-out">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPbLmMIQolhJF6JiDLlf4T_XFdkBITtOe8qnd9Ecby_QdFJZSTzEraHKGNFA0O0do2Nb9s6nGcbJIQykibmWIue8zN1HkXwrl97mKOB4ziSV1p1dop0xNtz-Hr-7wQhin0AgN_oD7ufF8XYNys2vb7gz5AuFi6W_yOcuE52wSdXak4CBMWASDT4EKEy02QHGvz_P-YRvGukKwGECuUlfhTZt7Zk9L9Du-DuYn0QKkCit37ex1gUgbCSY_ivz_xMJ5QGVASsjWlw"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Bottom Nav for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 h-16 flex justify-around items-center px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-blue-600">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="text-[10px] font-bold">Bayar</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Pengaturan</span>
+</button>
+</nav>
+</body></html>

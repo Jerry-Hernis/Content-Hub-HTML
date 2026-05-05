@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentHub | Rina Wijaya Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "secondary": "#9b4500",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#d4e3ff",
+                        "on-secondary-fixed-variant": "#763300",
+                        "outline": "#717783",
+                        "surface-tint": "#0060ac",
+                        "on-secondary-container": "#672c00",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c1c7d3",
+                        "on-background": "#191c21",
+                        "on-secondary-fixed": "#331200",
+                        "on-primary-container": "#fdfcff",
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#eff0f8",
+                        "on-primary-fixed": "#001c39",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-low": "#f2f3fb",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface-container": "#ecedf5",
+                        "on-surface-variant": "#414751",
+                        "inverse-surface": "#2e3036",
+                        "inverse-primary": "#a4c9ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffdbc9",
+                        "tertiary": "#7f5300",
+                        "secondary-fixed-dim": "#ffb68d",
+                        "surface-container-highest": "#e1e2e9",
+                        "surface-container-high": "#e6e8ef",
+                        "on-surface": "#191c21",
+                        "surface-bright": "#f8f9ff",
+                        "tertiary-container": "#a06900",
+                        "on-primary-fixed-variant": "#004883",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fc8a40",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#2976c7",
+                        "surface-dim": "#d8dae1",
+                        "primary": "#005da7",
+                        "surface-variant": "#e1e2e9",
+                        "primary-fixed-dim": "#a4c9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(248, 249, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- SideNavBar (Authority: JSON & Design System) -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-40 transition-all duration-200 ease-in-out">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none" style="">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1" style="">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active State: Dashboard -->
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#" style="">
+<span class="material-symbols-outlined" data-icon="dashboard" style="">dashboard</span>
+<span class="font-plus-jakarta-sans text-sm" style="">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#" style="">
+<span class="material-symbols-outlined" data-icon="calendar_month" style="">calendar_month</span>
+<span class="font-plus-jakarta-sans text-sm" style="">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#" style="">
+<span class="material-symbols-outlined" data-icon="layers" style="">layers</span>
+<span class="font-plus-jakarta-sans text-sm" style="">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#" style="">
+<span class="material-symbols-outlined" data-icon="help" style="">help</span>
+<span class="font-plus-jakarta-sans text-sm" style="">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="Rina Wijaya" class="w-10 h-10 rounded-full object-cover" data-alt="professional portrait of a young indonesian woman creative director in a modern office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPbLmMIQolhJF6JiDLlf4T_XFdkBITtOe8qnd9Ecby_QdFJZSTzEraHKGNFA0O0do2Nb9s6nGcbJIQykibmWIue8zN1HkXwrl97mKOB4ziSV1p1dop0xNtz-Hr-7wQhin0AgN_oD7ufF8XYNys2vb7gz5AuFi6W_yOcuE52wSdXak4CBMWASDT4EKEy02QHGvz_P-YRvGukKwGECuUlfhTZt7Zk9L9Du-DuYn0QKkCit37ex1gUgbCSY_ivz_xMJ5QGVASsjWlw" style=""/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate" style="">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate" style="">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-64 p-10 min-h-screen">
+<!-- Header -->
+<header class="flex justify-between items-center mb-12">
+<div>
+<h1 class="text-4xl font-bold tracking-tight text-on-background mb-2" style="">Welcome back, Rina</h1>
+<p class="text-on-surface-variant font-medium" style="">Your editorial workspace is ready for today's curation.</p>
+</div>
+<div class="flex items-center space-x-4">
+<button class="w-12 h-12 rounded-full flex items-center justify-center bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" style="">
+<span class="material-symbols-outlined" style="">notifications</span>
+</button>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-2xl font-semibold flex items-center space-x-2 shadow-lg shadow-primary/10 active:scale-95 transition-transform" style="">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>add_circle</span>
+<span class="" style="">Start Create</span>
+</button>
+</div>
+</header>
+<!-- Bento Grid Content -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Key Stats Row -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-3 gap-6">
+<!-- Stat 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl flex flex-col justify-between h-44 shadow-sm border border-outline-variant/5">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest" style="">Total Posts</span>
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="">send</span>
+</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold" style="">124</div>
+<div class="text-[10px] text-primary font-bold mt-1" style="">+12% from last month</div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl flex flex-col justify-between h-44 shadow-sm border border-outline-variant/5">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest" style="">Success Rate</span>
+<span class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-sm" style="">trending_up</span>
+</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold" style="">94.2%</div>
+<div class="text-[10px] text-tertiary font-bold mt-1" style="">Industry peak</div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl flex flex-col justify-between h-44 shadow-sm border border-outline-variant/5">
+<div class="flex justify-between items-start">
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-widest" style="">Upcoming</span>
+<span class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm" style="">schedule</span>
+</span>
+</div>
+<div>
+<div class="text-3xl font-extrabold" style="">08</div>
+<div class="text-[10px] text-secondary font-bold mt-1" style="">Scheduled for week</div>
+</div>
+</div>
+</div>
+<!-- Mini Calendar View (Sidebar of Dashboard) -->
+<div class="col-span-12 lg:col-span-4 row-span-2">
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant/5 h-full">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-bold text-lg" style="">Calendar</h3>
+<div class="flex space-x-2">
+<button class="p-1 hover:text-primary transition-colors" style=""><span class="material-symbols-outlined" style="">chevron_left</span></button>
+<button class="p-1 hover:text-primary transition-colors" style=""><span class="material-symbols-outlined" style="">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-y-6 text-center text-xs font-bold text-on-surface-variant mb-6">
+<span class="" style="">S</span><span class="" style="">M</span><span class="" style="">T</span><span class="" style="">W</span><span class="" style="">T</span><span class="" style="">F</span><span class="" style="">S</span>
+</div>
+<div class="grid grid-cols-7 gap-y-4 text-center">
+<!-- Empty states for alignment -->
+<span class="text-outline/30 py-2" style="">29</span>
+<span class="text-outline/30 py-2" style="">30</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">1</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">2</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer relative" style="">
+                            3
+                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-secondary rounded-full"></span>
+</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">4</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">5</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">6</span>
+<span class="bg-primary text-on-primary py-2 rounded-lg font-bold shadow-md shadow-primary/20" style="">7</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer relative" style="">
+                            8
+                            <span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span>
+</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">9</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">10</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">11</span>
+<span class="text-on-surface py-2 hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer" style="">12</span>
+</div>
+<div class="mt-10 space-y-4">
+<p class="text-xs font-extrabold text-on-surface-variant uppercase tracking-widest" style="">Today's Agenda</p>
+<div class="flex items-center space-x-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-1.5 h-10 bg-primary rounded-full"></div>
+<div>
+<p class="text-sm font-bold" style="">Product Showcase</p>
+<p class="text-[10px] text-on-surface-variant" style="">Instagram • 14:00 PM</p>
+</div>
+</div>
+<div class="flex items-center space-x-4 p-4 rounded-xl bg-surface-container-low">
+<div class="w-1.5 h-10 bg-secondary rounded-full"></div>
+<div>
+<p class="text-sm font-bold" style="">Draft: Weekly Vlog</p>
+<p class="text-[10px] text-on-surface-variant" style="">TikTok • 18:30 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity / Content Feed -->
+<div class="col-span-12 lg:col-span-8">
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-bold text-xl" style="">Recent Content</h3>
+<a class="text-primary text-sm font-bold hover:underline decoration-2 underline-offset-4" href="#" style="">View All Library</a>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<!-- Content Card 1 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/5 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="h-48 w-full relative overflow-hidden">
+<img alt="Market post" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="vibrant farmers market scene with fresh organic vegetables in woven baskets and soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQsInBVfxDREF0RVoqAFYYi3_P1lvF_j3vY8IEK8Gjrfgj3skAwfd0s0tbFNAXfKPzMpKXuS7M18qjV9Yrh9meOB59Ifkm93S58zsJNVcWwD1Ajxy0rGzyP0Cv107ovLpiu6ASHldEzCBkw5q6qEB5C3QWH-DxsOnXZz0yxU7vBUIP1Thj0S2DYG7DTDQxod_o1t5wFCPF8TIE7MKNDcnuKQ_KPw0_QPqJXRyYLC5IINGFQLB_3viMWREOeMJeEGmJ26SIV3kTg" style=""/>
+<div class="absolute top-4 left-4 bg-primary/90 backdrop-blur-md text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest" style="">
+                                Scheduled
+                            </div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-base mb-2 italic" style="">Sustainable Sourcing Story</h4>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<span class="material-symbols-outlined text-outline-variant text-xl" style="">image</span>
+<span class="material-symbols-outlined text-outline-variant text-xl" style="">description</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium" style="">Post in 2 days</span>
+</div>
+</div>
+</div>
+<!-- Content Card 2 -->
+<div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm border border-outline-variant/5 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="h-48 w-full relative overflow-hidden">
+<img alt="Customer service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close-up of a friendly person typing on a laptop in a bright modern cafe environment with blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFi0mX_TVeMAY55DzRorU-ja70F6uNZA_S-uYM17sKuZ5UDI2CZbyj_2Ic9qhBqV4jeBSJkyNccc7Hw7XP7sYk-lEFX_Z_hzIA_8GpYG4gjLEQTPPfwJhow_q0ymZufZnuGg2mFx08P-53CwB_Mkti0sDd4AZLObVI9COhMmiMYlD6V3BRKDnIdn54Fsab-0cXg_EomEpqAfKdZyxrOFfW_Y5Sn82o0I9Yt6eDCLj0P9AdLDVZwInPM5l3ANlOlJAECZ_QUNr0Qg" style=""/>
+<div class="absolute top-4 left-4 bg-secondary/90 backdrop-blur-md text-on-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest" style="">
+                                Drafting
+                            </div>
+</div>
+<div class="p-6">
+<h4 class="font-bold text-base mb-2 italic" style="">How We Treat Our Community</h4>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<span class="material-symbols-outlined text-outline-variant text-xl" style="">movie</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium" style="">Last edit 1h ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Authority: JSON & Design System) -->
+<footer class="mt-20 py-12 border-t border-outline-variant/15 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8">
+<div class="mb-6 md:mb-0">
+<span class="font-bold text-blue-700" style="">ContentHub</span>
+<p class="font-plus-jakarta-sans text-xs text-slate-500 mt-2" style="">© 2024 ContentHub. All rights reserved.</p>
+</div>
+<div class="flex space-x-8">
+<a class="font-plus-jakarta-sans text-xs text-slate-500 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Contact</a>
+<a class="font-plus-jakarta-sans text-xs text-slate-500 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Privacy</a>
+<a class="font-plus-jakarta-sans text-xs text-slate-500 hover:underline opacity-80 hover:opacity-100 transition-opacity" href="#" style="">Terms</a>
+</div>
+</footer>
+</main>
+</body></html>
