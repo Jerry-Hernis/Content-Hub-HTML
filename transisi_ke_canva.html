@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Membuka Canva - ContentHub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb68d",
+                    "outline-variant": "#c1c7d3",
+                    "error": "#ba1a1a",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-dim": "#d3daef",
+                    "outline": "#717783",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "primary-container": "#2976c7",
+                    "on-secondary-fixed-variant": "#763300",
+                    "inverse-primary": "#a4c9ff",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed-dim": "#ffb953",
+                    "on-surface-variant": "#414751",
+                    "surface-variant": "#dce2f7",
+                    "primary-fixed-dim": "#a4c9ff",
+                    "inverse-on-surface": "#edf0ff",
+                    "surface-container-low": "#f1f3ff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#331200",
+                    "secondary": "#9b4500",
+                    "on-tertiary-fixed": "#291800",
+                    "surface-container-highest": "#dce2f7",
+                    "secondary-container": "#fc8a40",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#672c00",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#293040",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#fdfcff",
+                    "on-background": "#141b2b",
+                    "surface-container-high": "#e1e8fd",
+                    "error-container": "#ffdad6",
+                    "primary": "#005da7",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#a06900",
+                    "background": "#f9f9ff",
+                    "surface-container": "#e9edff",
+                    "surface-tint": "#0060ac",
+                    "on-surface": "#141b2b",
+                    "secondary-fixed": "#ffdbc9",
+                    "on-primary-fixed": "#001c39",
+                    "tertiary": "#7f5300",
+                    "primary-fixed": "#d4e3ff",
+                    "tertiary-fixed": "#ffddb4",
+                    "on-primary-fixed-variant": "#004883"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-soft-blend {
+            background: radial-gradient(circle at top left, #f1f3ff 0%, #f9f9ff 50%, #fdfcff 100%);
+        }
+        .progress-shimmer {
+            background: linear-gradient(90deg, #005da7 0%, #2976c7 50%, #005da7 100%);
+            background-size: 200% 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-hidden">
+<!-- Loading Screen Container -->
+<main class="min-h-screen w-full flex items-center justify-center bg-soft-blend relative">
+<!-- Background Abstract Accents (Editorial Texture) -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-[100px]"></div>
+</div>
+<div class="max-w-2xl w-full px-8 flex flex-col items-center z-10">
+<!-- Logo Integration Section -->
+<div class="flex items-center gap-12 mb-16">
+<!-- ContentHub Logo -->
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center p-4">
+<img class="w-full h-full object-contain" data-alt="Professional geometric brand logo for ContentHub using blue and white palette with minimalist lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYbPgzcCfhk0W4pfDzw-UpeJyHWjDOcC1GC1Xzv29-gdPfnDJjDxM1vgHZXt5X7s_iUbr82rBD1lFbWEQCEnLI-ofxMdmh70727kJqcokM2LJrpDqNKdaWmI9p0f9dj3FQjcRXnAfb9RKPLJDnJIkBSHm9KOCi3ph2HX6ajjP_H7MIja1SQsPhFV6lNJqLdXle_BpYptATaQN_oKVuM0vjGHOZ_Ns_lVnZn5PrUvKgO7Zm1bGujkJcXOKW_PY7IBVXk1x25t4jBQ"/>
+</div>
+<span class="mt-4 text-xs font-bold tracking-[0.1em] uppercase text-on-surface-variant">ContentHub</span>
+</div>
+<!-- Animated Arrow/Transition Indicator -->
+<div class="flex flex-col items-center">
+<div class="text-primary-container">
+<span class="material-symbols-outlined text-4xl">arrow_forward</span>
+</div>
+</div>
+<!-- Canva Logo -->
+<div class="flex flex-col items-center">
+<div class="w-20 h-20 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center p-4">
+<img class="w-full h-full object-contain" data-alt="Official Canva logo featuring the signature gradient swirl icon on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj-4NdpXizNzNB9Cl41mW9uary3L_VAdncTj-yhBnrXVOZ_PFsE9fbgInns3tEK9Bd5LCyTJb3ncEPm9SVIoidAccFhjPTLYka_9vwsCdkL-trUlWJu2Mcw4VjKIh-bCHJfK2xTQ9BiUr75FyUwG-C8K4Xs4bYy2nfCAKe7spxtsjYs6gMO5fx1Pa5UUPVenusQd-pqV0CUgzdMlwK0I9_yK-iotATRPWvlsl3lK_gl47tYwSd7n6egcSX4DBN-S_KgiaO6F-piQ"/>
+</div>
+<span class="mt-4 text-xs font-bold tracking-[0.1em] uppercase text-on-surface-variant">Canva</span>
+</div>
+</div>
+<!-- Content & Status -->
+<div class="text-center space-y-6 w-full">
+<div class="space-y-2">
+<h1 class="text-2xl md:text-3xl font-extrabold text-on-surface tracking-tight leading-tight">
+                        Sedang membuka Canva...
+                    </h1>
+<p class="text-on-surface-variant text-base font-medium opacity-80">
+                        Akun Anda sedang disinkronkan untuk pengeditan
+                    </p>
+</div>
+<!-- Sleek Progress Bar -->
+<div class="w-full max-w-md mx-auto">
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<!-- Progress state set to 65% for simulation -->
+<div class="h-full w-[65%] progress-shimmer rounded-full"></div>
+</div>
+<div class="flex justify-between mt-3 px-1">
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Mengamankan Sesi</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">65%</span>
+</div>
+</div>
+</div>
+<!-- Editorial Tip / Bottom Info -->
+<div class="mt-24 max-w-sm text-center">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-low rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-sm" data-weight="fill">verified_user</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Integrasi Resmi</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed opacity-70">
+                    Kami menggunakan koneksi API terenkripsi untuk memastikan seluruh aset desain Anda tetap aman dan sinkron antara ContentHub dan workspace Canva Anda.
+                </p>
+</div>
+</div>
+<!-- Glassmorphic Footer Decoration -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 w-full max-w-xs h-12 bg-surface-container-lowest/40 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+<span class="text-[11px] font-bold uppercase tracking-widest text-on-surface-variant">Menghubungkan Server...</span>
+</div>
+</div>
+</main>
+</body></html>

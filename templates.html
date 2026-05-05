@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-error": "#ffffff",
+                  "secondary": "#9b4500",
+                  "error": "#ba1a1a",
+                  "primary-fixed": "#d4e3ff",
+                  "on-secondary-fixed-variant": "#763300",
+                  "outline": "#717783",
+                  "surface-tint": "#0060ac",
+                  "on-secondary-container": "#672c00",
+                  "background": "#f8f9ff",
+                  "outline-variant": "#c1c7d3",
+                  "on-background": "#191c21",
+                  "on-secondary-fixed": "#331200",
+                  "on-primary-container": "#fdfcff",
+                  "on-tertiary-fixed": "#291800",
+                  "tertiary-fixed-dim": "#ffb953",
+                  "error-container": "#ffdad6",
+                  "inverse-on-surface": "#eff0f8",
+                  "on-primary-fixed": "#001c39",
+                  "on-tertiary-container": "#fffbff",
+                  "surface-container-low": "#f2f3fb",
+                  "on-secondary": "#ffffff",
+                  "surface": "#f8f9ff",
+                  "on-tertiary-fixed-variant": "#633f00",
+                  "surface-container": "#ecedf5",
+                  "on-surface-variant": "#414751",
+                  "inverse-surface": "#2e3036",
+                  "inverse-primary": "#a4c9ff",
+                  "on-tertiary": "#ffffff",
+                  "secondary-fixed": "#ffdbc9",
+                  "tertiary": "#7f5300",
+                  "secondary-fixed-dim": "#ffb68d",
+                  "surface-container-highest": "#e1e2e9",
+                  "surface-container-high": "#e6e8ef",
+                  "on-surface": "#191c21",
+                  "surface-bright": "#f8f9ff",
+                  "tertiary-container": "#a06900",
+                  "on-primary-fixed-variant": "#004883",
+                  "surface-container-lowest": "#ffffff",
+                  "secondary-container": "#fc8a40",
+                  "tertiary-fixed": "#ffddb4",
+                  "on-primary": "#ffffff",
+                  "on-error-container": "#93000a",
+                  "primary-container": "#2976c7",
+                  "surface-dim": "#d8dae1",
+                  "primary": "#005da7",
+                  "surface-variant": "#e1e2e9",
+                  "primary-fixed-dim": "#a4c9ff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "2xl": "1.5rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Plus Jakarta Sans"],
+                  "body": ["Plus Jakarta Sans"],
+                  "label": ["Plus Jakarta Sans"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-auto-rows: 10px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar Implementation -->
+<!-- Main Layout Shell -->
+<div class="flex min-h-screen">
+<!-- SideNavBar Implementation (Updated to match SCREEN_35) -->
+<aside class="hidden lg:flex h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex-col p-6 space-y-8 z-40">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-plus-jakarta-sans text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-plus-jakarta-sans text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="layers" style="font-variation-settings: 'FILL' 1;">layers</span>
+<span class="font-plus-jakarta-sans text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-plus-jakarta-sans text-sm">Bantuan</span>
+</a>
+</nav>
+</aside>
+<!-- Content Canvas -->
+<main class="flex-1 lg:ml-64 p-8 bg-surface">
+<!-- Hero/Search Section -->
+<section class="max-w-7xl mx-auto mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-background mb-2">Template Library</h1>
+<p class="text-on-surface-variant max-w-lg">Elevate your brand with professionally designed social media assets tailored for SMEs.</p>
+</div>
+<div class="relative w-full md:w-96 group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-high border-none rounded-2xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all" placeholder="Search templates..." type="text"/>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3 mb-8">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-medium text-sm shadow-sm hover:opacity-90 transition-opacity">All Templates</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-medium text-sm hover:bg-surface-container-high transition-colors">Promosi</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-medium text-sm hover:bg-surface-container-high transition-colors">Edukasi</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-medium text-sm hover:bg-surface-container-high transition-colors">Engagement</button>
+<div class="h-8 w-px bg-outline-variant/30 mx-2"></div>
+<button class="px-5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-medium text-sm hover:opacity-80 transition-opacity">Format 1:1</button>
+<button class="px-5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-medium text-sm hover:opacity-80 transition-opacity">Format 9:16</button>
+</div>
+<!-- Category Dividers (Implicit) -->
+<div class="flex items-center gap-4 mb-8">
+<span class="text-sm font-bold uppercase tracking-widest text-outline">Promotion Showcase</span>
+<div class="flex-1 h-px bg-outline-variant/15"></div>
+</div>
+<!-- Pinterest-style Grid (Bento/Masonry Hybrid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Template Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="vibrant neon orange social media template with minimalist typography and abstract product placement in soft studio light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbIgOIY1vEqSgoHHMLzpfb_ErzCGmQ2WW9DAvI5yFxoDcZQNnob255a9mBzum9u5mTcazxGoFAlSqDmfxQ7K-LxgzRVtGbDAOMJUVW5buFf-2GdnFNWvBqRqmaknbYQrJpR7VGk5pTrJA_jAtArxcGoQGtkabBKNojLodvshv8Lntke92kuqwA1f42TnTU73jaARKcvtMnKm-7SN9TmHm2fDQ_dT-j8nh9hl3txOlydwZnMu0XV-0dFKi4twGjPtPGLm3Z2sDrOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-primary">9:16 Vertical</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Flash Sale Minimalist</h3>
+<p class="text-xs text-on-surface-variant">Promosi • Instagram Stories</p>
+</div>
+<!-- Template Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="clean professional education template for carousel posts with soft blue gradients and crisp geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzaSCcgIdELtlVju__2yV1C5xRAAqT1_Ih0Af_8N2nr4vqM_nmgyFzqzATn-jSz2tms20F1mwCqKUzou_FEX7VO_DPlzlw6m6wrFTquLL-Xb3H4g-ix8AMCo66mxeKSicc8JbZe4jaAbugAT2Ew7yRiZzYV2fAb3aKaFPLKkvZ2VgnDSVyr8ad30VrVu01cgQ5u-h4ANcXsZVEQTq1Ymui1vrwmLxPmjFqQoOxP2zye7-Vs_CbBuL26HYG2MtT0zif5hMUk0401Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-secondary">1:1 Square</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Edu-Carousel Insights</h3>
+<p class="text-xs text-on-surface-variant">Edukasi • Carousel</p>
+</div>
+<!-- Template Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="aesthetic lifestyle photo template for small business engagement with neutral beige tones and elegant serif font" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUZX2bAy6JNKHT8z23UXtjeOesfQGN85Za5RZbfmZD8C24Pdjm7e2cR0bTYQIa50hGBcYSnbT6hxMM8sQhxFDoVZx6QKgReaxhSs1dskFdw6fiEM43GkulkxmhKKsZcIM_WY863Ppb6G-O3qdySHq2Q4FOMTyeKNcJfzTo70FNBtzmfJTxAgTxuP6NTMvyOlp06V_8Go1iXQM6ysk5z4bv_KAdAKYCpcTneLjBwDkYOPVjwLbcOafzpLznugcUig56M_JPJBqC6A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-primary">9:16 Vertical</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Morning Vibe Engagement</h3>
+<p class="text-xs text-on-surface-variant">Engagement • Reels</p>
+</div>
+<!-- Template Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="dark high-contrast marketing template for luxury products with golden typography accents and professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrx0wDindnwL0IYFlk0idw1FF7PxxO0bSdXLVP_tvDv4lv9Jvy73wfEb5Ih5xmpqbGShJsG6R3vEGJQzRQXXSugHTJRN8DxEhpAVOAmMpALWnhXekV5xr6H6ijI7ZCztW-ZKdktXydyqrFj3QwdbDVwockMTQrlqwniuKA2IF0HcKeaLZ219Gv_3jplfKdCz8iMoL6SpAW0P2gOwLWwXlyH6rl4X0krL_hu5txl09cvkrJ_XCnYexi6kdI8NXiJMOSnihzyj-f1A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-secondary">1:1 Square</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Premium Product Launch</h3>
+<p class="text-xs text-on-surface-variant">Promosi • Feed</p>
+</div>
+<!-- Template Card 5 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="colorful and friendly tip-of-the-day template with hand-drawn elements and soft pastel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQdcosPGBXkWsOngPcBcsI1rl5ZMxaUVRKkuexRbuiELpNrrMXU7FHUT7Owxq4vrWNMApO5PknPWAwOx4K3FA_j3SZL7LupIs91T5K-nD9QumSSL5G862yZt9EjyuGkFXiXVrrl6Sp2R-v2mCILVqqV31igaF0cd12Il_xiN97kXYqaTBmnALVSQafvE4rN2bAIovysq9n2xyCE9MeR8It_keFhWQYH8QLc6lZSJ6YGddJI9iWpoP00dOdsfu28I240BDPVHtccg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-secondary">1:1 Square</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Daily Tips Series</h3>
+<p class="text-xs text-on-surface-variant">Edukasi • Feed</p>
+</div>
+<!-- Template Card 6 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="abstract flowing 3d shapes in purple and blue with modern typography for tech brand promotion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw20xeOUeGk0iyQrjl0NPXycqQB24w23voKjfNWR1UoQGsN5tPqvAaT8CEuQN5H3sF2WZvAZdT4VPss7qP0oAK3G-GLrM2DsQoJ1k_L63Jxns7Uwh0XCVWEB5bIMaO80nmCMCrPVtKVeqCkqrts2fYvq2-s08IxoJxDjFWLfniKt21n76t5Nmx73KBCFt1tG2ONHY-pynlWC08lmD8VOW0T7buFRNoo-iJc5JKNExmd0u-TYn8yYaE1jmBDYL2aQDH-XbfUhP_jw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-primary">9:16 Vertical</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Future Tech Promo</h3>
+<p class="text-xs text-on-surface-variant">Promosi • TikTok</p>
+</div>
+<!-- Template Card 7 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="tech hardware aesthetic for informative content with grid patterns and industrial design elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSiDKv_BhDe8OOJ_5OyM7-jC8M-SutPfl_zfj7RLTW0Xa-id_Ax7VhvV_UiGbkNpJeBaLQCm-Ik60sQWNiBcBu7xLmVi6GwsEhTKctBsWxGWcMCY_OMwATsg-YXFa8d9lTr7Y-SoYdSkpoFQH-pNbiSh3nCg3uqqGGOEWAY1NjYwRLs1CvGSedBYOVSKkJeYXF_doPGP0d0lrogv69oHZYnFHhn79jlCeGOUCGvDhA0K8nDfy9tzjNqgjX1d0g7ab6vNi0aNuiXw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-secondary">1:1 Square</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Tech Spec Breakdown</h3>
+<p class="text-xs text-on-surface-variant">Edukasi • Carousel</p>
+</div>
+<!-- Template Card 8 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-2xl overflow-hidden mb-4 bg-surface-container-low shadow-sm transition-transform duration-300 group-hover:-translate-y-2">
+<img class="w-full h-full object-cover" data-alt="warm inviting culinary photography template for restaurant promotions with elegant typography overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNd0jZ50ma5wugrXdAH48AKovlvLSj3s3syxQVFHVzVwSwM5gvDMD5RAphYXvYAjlWjwYFtOqYabDl9dS_4xLXz8PpcLObfYGA4BxagrqWRpplgI4jI-IZlTkgn4JLtENKw8BFqnNdXAJyhSjmY0wuDDvciUm14qh8zkBVo3u2mTM9ERvKwepw8eai51Pry_jaC-A3FVS6i544RKVa15DTRxzlDWUG2qo-SuHuUwHuGIWDycDikOXt80iGhQKyCi0G1Ps8iY3clA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<button class="w-full py-3 bg-white text-primary font-bold rounded-xl shadow-lg">Use Template</button>
+</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider text-primary">9:16 Vertical</div>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Foodie Story Special</h3>
+<p class="text-xs text-on-surface-variant">Promosi • Stories</p>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer Implementation -->
+<footer class="w-full border-t border-slate-100 dark:border-slate-800 bg-surface dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto font-plus-jakarta-sans text-xs">
+<div class="mb-6 md:mb-0">
+<span class="font-bold text-blue-700 text-base">ContentHub</span>
+<p class="text-slate-500 mt-2">© 2024 ContentHub. All rights reserved.</p>
+</div>
+<div class="flex gap-8 text-slate-500">
+<a class="hover:underline hover:text-blue-700 transition-colors" href="#">Contact</a>
+<a class="hover:underline hover:text-blue-700 transition-colors" href="#">Privacy</a>
+<a class="hover:underline hover:text-blue-700 transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>
