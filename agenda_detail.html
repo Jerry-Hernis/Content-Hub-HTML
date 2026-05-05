@@ -1,0 +1,334 @@
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Today's Agenda - ContentHub</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#291800",
+                        "tertiary-fixed": "#ffddb4",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#717783",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c7d3",
+                        "secondary-container": "#fc8a40",
+                        "background": "#f8f9ff",
+                        "inverse-surface": "#2e3036",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "on-surface": "#191c21",
+                        "tertiary": "#7f5300",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface-variant": "#e1e2e9",
+                        "surface-tint": "#0060ac",
+                        "surface-container-high": "#e6e8ef",
+                        "on-secondary-fixed-variant": "#763300",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#ffdbc9",
+                        "inverse-on-surface": "#eff0f8",
+                        "secondary": "#9b4500",
+                        "on-primary-container": "#fdfcff",
+                        "on-secondary-fixed": "#331200",
+                        "inverse-primary": "#a4c9ff",
+                        "on-surface-variant": "#414751",
+                        "on-secondary-container": "#672c00",
+                        "on-primary-fixed-variant": "#004883",
+                        "on-background": "#191c21",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001c39",
+                        "surface-dim": "#d8dae1",
+                        "surface-bright": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "primary": "#005da7",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f2f3fb",
+                        "surface-container": "#ecedf5",
+                        "primary-container": "#2976c7",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d4e3ff",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e1e2e9",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "secondary-fixed-dim": "#ffb68d",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-container": "#a06900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(248, 249, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 overflow-y-auto bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-50 transition-all duration-200 ease-in-out">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h1 class="text-lg font-bold text-blue-700 leading-none">Workspace</h1>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-plus-jakarta-sans text-sm">Dashboard</span>
+</a>
+<!-- Active State for Calendar -->
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-plus-jakarta-sans text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="font-plus-jakarta-sans text-sm">Template</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-plus-jakarta-sans text-sm">Bantuan</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm" data-alt="professional portrait of a young indonesian woman creative director in a modern office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPbLmMIQolhJF6JiDLlf4T_XFdkBITtOe8qnd9Ecby_QdFJZSTzEraHKGNFA0O0do2Nb9s6nGcbJIQykibmWIue8zN1HkXwrl97mKOB4ziSV1p1dop0xNtz-Hr-7wQhin0AgN_oD7ufF8XYNys2vb7gz5AuFi6W_yOcuE52wSdXak4CBMWASDT4EKEy02QHGvz_P-YRvGukKwGECuUlfhTZt7Zk9L9Du-DuYn0QKkCit37ex1gUgbCSY_ivz_xMJ5QGVASsjWlw"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Rina Wijaya</p>
+<p class="text-xs text-on-surface-variant truncate">SME Owner</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas - Updated padding-top to start from top -->
+<main class="ml-64 pt-12 pb-12 px-8 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight mb-2">Scheduled Content Overview</h2>
+<p class="text-on-surface-variant font-medium">Manage your creative output for Monday, March 29, 2026</p>
+</div>
+<div class="flex gap-2 p-1.5 bg-surface-container-low rounded-2xl">
+<button class="px-6 py-2 bg-white shadow-sm rounded-xl text-primary font-bold text-sm transition-all">Today</button>
+<button class="px-6 py-2 hover:bg-surface-container-high rounded-xl text-on-surface-variant font-medium text-sm transition-all">Upcoming</button>
+<button class="px-6 py-2 hover:bg-surface-container-high rounded-xl text-on-surface-variant font-medium text-sm transition-all">Past</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Agenda Feed -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<!-- Content Card 1 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-48 h-48 md:h-auto overflow-hidden">
+<img alt="Post Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern aesthetic social media flatlay with minimalist products and soft shadows on a beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANRHb_9iflOTj_ZWoImgNhEi4mcqVVt1UCiPwPLtgRMRzwCJo8IMItFx9LB1ypFoUubjRV9mSVUwF6343FhjS-cQUKhHRj_YWY8ZzuRrysVtIgUMep0IPh14VPTnNzt3GM__Ak36syv8XbAWzIT7hsWA8aWWggqQhv8VcYfghxL06IDi-_W5GIDAiZCmuKxU_KlkuwAdLmjFp3E1mZNuJ4FwCfBLpewG0yakz9PvYAA9bfweMAgw3waKSVMl44S3hKfGaXXNux4Q"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-secondary-container/10 text-secondary font-bold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">Instagram Reel</span>
+<span class="text-on-surface-variant text-xs font-medium">Flash Sale Minimalist</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight">Summer Collection Launch: Premium Essentials</h3>
+</div>
+<div class="bg-primary/5 text-primary p-2 rounded-xl">
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>schedule</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mt-6">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">calendar_today</span>
+<span class="text-sm font-semibold text-on-surface-variant">Monday, Mar 29</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">alarm</span>
+<span class="text-sm font-semibold text-on-surface-variant">19:00 WIB</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-5 py-2.5 rounded-xl border border-outline-variant text-on-surface-variant font-bold text-xs hover:bg-surface-container-low transition-colors">Preview Post</button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-xs shadow-md shadow-primary/20 hover:scale-[0.98] transition-all">Edit Schedule</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Card 2 (Draft) -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group transition-all border-l-4 border-secondary">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-48 h-48 md:h-auto overflow-hidden">
+<img alt="Post Thumbnail" class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="Creative studio workspace with tablet and color palette on a wooden desk with golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwQN5duGnQdJblSwdb2jnAs4pM2AUBt08q1GWLDg7GcI79HWUlhz7VclpXMLLjkzqii0_1epbKh30Tbjs6rU23f7lEezdY_SrU7p04kB6ocgWgXH1zN7mbTXDDC70Fla2yy3_EWtMRypKTV6ax1dUP85P3KjMfR1EFJbpeWnVW4Y0fpoH7vuI-sGl2brH79-qILxVsDcSxNpShpZp5oL4JjUzFUEEW2nR_0mlVgI6ne4p8Bwc3qv6a2GyCBsEiI3qnXzFRtU6xSw"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-surface-container-high text-on-surface-variant font-bold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">TikTok Video</span>
+<span class="text-on-surface-variant text-xs font-medium italic">Unassigned Template</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface opacity-80 leading-tight">Behind the Scenes: Product Photoshoot</h3>
+</div>
+<div class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+                                    Draft
+                                </div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mt-6">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">calendar_today</span>
+<span class="text-sm font-semibold text-on-surface-variant">Monday, Mar 29</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">alarm</span>
+<span class="text-sm font-semibold text-on-surface-variant">21:30 WIB</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-5 py-2.5 rounded-xl bg-secondary text-white font-bold text-xs shadow-md shadow-secondary/20 hover:scale-[0.98] transition-all">Finish Editing</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Card 3 -->
+<div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-sm group transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-48 h-48 md:h-auto overflow-hidden">
+<img alt="Post Thumbnail" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Abstract colorful gradient with grainy texture in deep blues and vibrant oranges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1uA35PgnmcMhGdftdPF3PkkmUEzc7h013nAe4jZocZ75_ovL5ahlPHJklpMtadSMOjf0B68T7gR0ZYwnTKsHDicbYaN_J_mdGOvGkzWsz2PTaFXZhj9eKlKJzaXxHInEvhhAJZE8KLsKoTSefsjzuzRbbcpWhXG9tB2irhs4vBC6RDCt4Bp7gGV7Z1bpB2hMjPfMrLqJ_r_TUpT7r83dAFiAdjZOtkhP-Na2JPIAxZzjybSBWCTtG6e0qKvvnL9_02RURrB99WQ"/>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-primary/10 text-primary font-bold text-[10px] px-2 py-0.5 rounded uppercase tracking-wider">Instagram Carousel</span>
+<span class="text-on-surface-variant text-xs font-medium">Educational Guide 101</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface leading-tight">5 Tips for Growing Your Organic Reach in 2026</h3>
+</div>
+<div class="bg-primary/5 text-primary p-2 rounded-xl">
+<span class="material-symbols-outlined text-xl" style='font-variation-settings: "FILL" 1;'>layers</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mt-6">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">calendar_today</span>
+<span class="text-sm font-semibold text-on-surface-variant">Monday, Mar 29</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline-variant">alarm</span>
+<span class="text-sm font-semibold text-on-surface-variant">10:00 WIB</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="px-5 py-2.5 rounded-xl border border-outline-variant text-on-surface-variant font-bold text-xs hover:bg-surface-container-low transition-colors">Preview Post</button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-white font-bold text-xs shadow-md shadow-primary/20 hover:scale-[0.98] transition-all">Edit Schedule</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: Stats & Filters -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<!-- Quick Stats Bento -->
+<div class="bg-surface-container rounded-3xl p-6">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-widest mb-6">Daily Snapshot</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm">
+<p class="text-outline text-[10px] font-bold uppercase mb-1">Posts Today</p>
+<p class="text-2xl font-black text-on-surface">04</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm">
+<p class="text-outline text-[10px] font-bold uppercase mb-1">Ready</p>
+<p class="text-2xl font-black text-primary">03</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm">
+<p class="text-outline text-[10px] font-bold uppercase mb-1">In Draft</p>
+<p class="text-2xl font-black text-secondary">01</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-2xl shadow-sm">
+<p class="text-outline text-[10px] font-bold uppercase mb-1">Reach Goal</p>
+<p class="text-2xl font-black text-on-surface">12k</p>
+</div>
+</div>
+</div>
+<!-- Platform Filters -->
+<div class="bg-surface-container-low rounded-3xl p-6">
+<h4 class="text-sm font-bold text-on-surface uppercase tracking-widest mb-4">Platform Filter</h4>
+<div class="space-y-3">
+<label class="flex items-center justify-between cursor-pointer p-3 rounded-2xl hover:bg-white transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" style='font-variation-settings: "FILL" 1;'>camera</span>
+</div>
+<span class="text-sm font-bold">Instagram</span>
+</div>
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer p-3 rounded-2xl hover:bg-white transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-slate-900/10 text-slate-900 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" style='font-variation-settings: "FILL" 1;'>movie</span>
+</div>
+<span class="text-sm font-bold">TikTok</span>
+</div>
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between cursor-pointer p-3 rounded-2xl hover:bg-white transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-blue-600/10 text-blue-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg" style='font-variation-settings: "FILL" 1;'>social_leaderboard</span>
+</div>
+<span class="text-sm font-bold">Facebook</span>
+</div>
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"/>
+</label>
+</div>
+</div>
+<!-- Upcoming Promo Banner -->
+<div class="bg-gradient-to-br from-tertiary-container to-secondary rounded-3xl p-6 text-white overflow-hidden relative">
+<div class="relative z-10">
+<h4 class="text-lg font-bold mb-2">Upcoming Holiday?</h4>
+<p class="text-xs opacity-90 leading-relaxed mb-4">Start drafting your Eid al-Fitr campaign now to beat the rush.</p>
+<button class="bg-white text-secondary px-6 py-2 rounded-xl font-bold text-xs hover:shadow-lg transition-all">Go to Drafts</button>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-20 rotate-12">celebration</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

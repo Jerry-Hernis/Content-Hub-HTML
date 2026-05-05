@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ContentHub - Drag &amp; Drop Content</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#ffb68d",
+                        "outline-variant": "#c1c7d3",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-dim": "#d3daef",
+                        "outline": "#717783",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "primary-container": "#2976c7",
+                        "on-secondary-fixed-variant": "#763300",
+                        "inverse-primary": "#a4c9ff",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-fixed-dim": "#ffb953",
+                        "on-surface-variant": "#414751",
+                        "surface-variant": "#dce2f7",
+                        "primary-fixed-dim": "#a4c9ff",
+                        "inverse-on-surface": "#edf0ff",
+                        "surface-container-low": "#f1f3ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#331200",
+                        "secondary": "#9b4500",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container-highest": "#dce2f7",
+                        "secondary-container": "#fc8a40",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#672c00",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#293040",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#fdfcff",
+                        "on-background": "#141b2b",
+                        "surface-container-high": "#e1e8fd",
+                        "error-container": "#ffdad6",
+                        "primary": "#005da7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a06900",
+                        "background": "#f9f9ff",
+                        "surface-container": "#e9edff",
+                        "surface-tint": "#0060ac",
+                        "on-surface": "#141b2b",
+                        "secondary-fixed": "#ffdbc9",
+                        "on-primary-fixed": "#001c39",
+                        "tertiary": "#7f5300",
+                        "primary-fixed": "#d4e3ff",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-primary-fixed-variant": "#004883"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "2xl": "1.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .drag-handle {
+            cursor: grab;
+        }
+        .dragging {
+            cursor: grabbing !important;
+        }
+        .ghost-border {
+            border: 2px dashed #005da766;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background antialiased overflow-hidden">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-slate-900 flex flex-col p-6 space-y-8 z-50">
+<div class="flex items-center space-x-3 px-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined">layers</span>
+</div>
+<div>
+<h2 class="text-lg font-bold text-blue-700 leading-none">Workspace</h2>
+<p class="text-[10px] text-on-surface-variant font-medium uppercase tracking-wider mt-1">Creative Director</p>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl transition-all duration-200 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm">Calendar</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-200 ease-in-out font-semibold rounded-xl" href="#">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-sm">Template</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-outline-variant/15">
+<div class="flex items-center space-x-3 px-2">
+<img alt="Budi Santoso" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a smiling middle-aged man in a linen shirt with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1mdmdM30pXOEAXxYKZdhRKMuwFE8edc_mgdLIUOLASwrcYyoFqjKreXNUODXRF8CUhjJZ7BLKULCdqCIq6O4LiOtbX0FpNNek01NPOJSPzAGa47UC5NPdRXUXOOJDtvbU9t7jSH-mDHCb3CMVgm4v2GMa-nztxNUGJ37gYkHXPtCdid_M2a9L39rNonGLf5ET4PKWyxHp9HJ_cN3Uq4Nlglfl6RL1MsHBX62in3oSZ61N2apeFKlDFVp_hjrQK9bfrxFnWRdWvA"/>
+<div class="overflow-hidden">
+<p class="text-sm font-bold truncate">Budi Santoso</p>
+<p class="text-xs text-on-surface-variant truncate">Owner Cafe Kita</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-64 p-8 min-h-screen bg-surface">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<p class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-primary mb-1">September 2024</p>
+<h2 class="text-3xl font-extrabold text-on-surface tracking-tight">Konten Kalender</h2>
+</div>
+<div class="flex gap-3">
+<div class="flex bg-surface-container-low p-1 rounded-xl">
+<button class="px-4 py-2 rounded-lg text-sm font-bold text-slate-400">List</button>
+<button class="px-4 py-2 rounded-lg bg-white shadow-sm text-sm font-bold text-primary">Month</button>
+<button class="px-4 py-2 rounded-lg text-sm font-bold text-slate-400">Week</button>
+</div>
+<button class="flex items-center gap-2 bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-lg">add</span>
+<span>Buat Konten</span>
+</button>
+</div>
+</div>
+<!-- Calendar Grid -->
+<div class="opacity-60 grayscale-[0.2] transition-opacity duration-300">
+<div class="grid grid-cols-7 gap-px bg-outline-variant/20 rounded-2xl overflow-hidden shadow-sm">
+<!-- Day Headers -->
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Sun</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Mon</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Tue</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Wed</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Thu</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Fri</span>
+</div>
+<div class="bg-surface-container-low p-4 text-center border-b border-outline-variant/10">
+<span class="text-[10px] font-extrabold uppercase tracking-widest text-outline">Sat</span>
+</div>
+<!-- Calendar Cells -->
+<div class="bg-surface min-h-[140px] p-3 text-right text-outline-variant/50">28</div>
+<div class="bg-surface min-h-[140px] p-3 text-right text-outline-variant/50">29</div>
+<div class="bg-surface min-h-[140px] p-3 text-right text-outline-variant/50">30</div>
+<div class="bg-surface min-h-[140px] p-3 text-right text-outline-variant/50">31</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">1</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">2</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">3</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">4</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">5</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">6</div>
+<div class="bg-surface-container-low min-h-[140px] p-3 text-right font-bold text-on-surface">
+                    7
+                    <div class="mt-2 h-16 w-full rounded-lg bg-surface-container-highest/50 border border-dashed border-outline-variant flex items-center justify-center text-[10px] text-outline italic">
+                        Item dipindahkan...
+                    </div>
+</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">8</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">9</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">10</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">11</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">12</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">13</div>
+<div class="bg-blue-50/50 min-h-[140px] p-3 text-right font-bold text-primary relative ring-2 ring-primary ring-inset ring-offset-0 border-2 border-dashed border-primary/40 rounded-sm">
+                    14
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-primary text-white text-[10px] font-extrabold px-3 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                            Lepaskan untuk memindahkan
+                        </div>
+</div>
+</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">15</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">16</div>
+<div class="bg-surface min-h-[140px] p-3 text-right font-bold text-on-surface">17</div>
+</div>
+</div>
+<!-- THE DRAGGING ITEM -->
+<div class="fixed top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2 z-[100] dragging scale-105 pointer-events-none">
+<div class="absolute -inset-2 bg-primary/10 blur-xl rounded-2xl"></div>
+<div class="relative w-64 bg-surface-container-lowest rounded-xl shadow-2xl shadow-primary/20 opacity-90 border border-primary/20 overflow-hidden transform rotate-2">
+<div class="h-24 w-full bg-slate-200 relative">
+<img alt="Content Preview" class="w-full h-full object-cover opacity-60" data-alt="close-up of a beautifully decorated latte in a minimalist cafe setting with soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPEAwfkHrWqijAn8gYEB2Dj67XE70a_1SguS2Ma0Nu7Z5bTt_Z2g5FBg39KFZohWitx58h2LyW6JyaVt78rhH9HGBebc2kMilPq-Z_Cp7h3Vjww7i7e56sOActNh6jzyLXvHMgsEjePsKwSuVskLuz9TAR-iyB8j7XV7nFYSrcn1SjTD0eqZDsCex-IBDz9aXHYjqst8_MurdlnNBCqMY7Hb3kycyePwMZUXd8cBR7tspw1aWbnUU4MqaMRB2v8CbF6nFzO8oE4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-2 left-3">
+<span class="bg-secondary text-on-secondary text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Promo</span>
+</div>
+</div>
+<div class="p-4">
+<h4 class="text-sm font-bold text-on-surface leading-tight mb-2">Morning Vibes: Promo Kopi Pagi Diskon 30%</h4>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-[10px] text-outline font-bold">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>09:00 AM</span>
+</div>
+<div class="flex items-center gap-1 text-[10px] text-outline font-bold">
+<span class="material-symbols-outlined text-xs">share</span>
+<span>Instagram</span>
+</div>
+</div>
+</div>
+<div class="absolute top-2 left-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">drag_indicator</span>
+</div>
+</div>
+<div class="absolute top-[20px] left-[10px] -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-on-surface scale-150 drop-shadow-md">back_hand</span>
+</div>
+</div>
+</main>
+<!-- Contextual FAB -->
+<div class="fixed bottom-10 right-10">
+<div class="group relative">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-tertiary-container rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<button class="relative bg-primary text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-xl transition-transform active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+</div>
+</div>
+</body></html>
